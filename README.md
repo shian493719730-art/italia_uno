@@ -33,6 +33,12 @@ npm run typecheck
 
 `"private": true` in package.json prevents accidental npm registry publication; this repository and its MIT source are public.
 
+## Brand promotion workflow
+
+This repository also includes a local-first Instagram publishing workflow in [`workflows/instagram-publishing/`](workflows/instagram-publishing/). It turns reviewed, authorized brand material into a queue with a pause switch, daily limit, duplicate-prevention ledger and a required post-publication readback. It does not log in, generate posts, or automatically publish; a separately authorized browser operator performs the final action once.
+
+Start with the [brand promotion guide](docs/BRAND_PROMOTION_WORKFLOW.md). Private account settings, media, evidence and ledger data remain ignored locally. The workflow is deliberately paused by default.
+
 ## Play
 
 - Enter the street-front café and explore five independent room interactions.
