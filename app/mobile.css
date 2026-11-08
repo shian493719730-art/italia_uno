@@ -339,3 +339,5 @@
  .shift-upgrades>div:first-child{display:none}
  .format-layout .keepsake-head h3{font-size:24px!important;line-height:1.35!important}
 }
+/* Start over button: narrower on small phones so the logo text is not squeezed */
+@media(max-width:374px){.format-layout .restart-button{width:32px}}
