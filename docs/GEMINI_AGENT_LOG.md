@@ -2,7 +2,7 @@
 
 **Creative Track · reviewed 8 November 2026**
 
-[Demo media and supplemental explanation](DEMO_MEDIA.md) · [Whole-project development walkthrough](https://share.gemini.google/6HcePfZERAVp) · [Toolkit and brand-book dialogue](https://share.gemini.google/1ol6yl0YbhvM) · [Reusable workflow](../workflows/gemini-creative-track/README.md) · [One-page brand-book copy](GEMINI_BRAND_BOOK_PAGE.md)
+[Prompt showcase and citations](../workflows/gemini-creative-track/PROMPTS.md#prompt-showcase) · [Demo media and supplemental explanation](DEMO_MEDIA.md) · [Whole-project development walkthrough](https://share.gemini.google/6HcePfZERAVp) · [Toolkit and brand-book dialogue](https://share.gemini.google/1ol6yl0YbhvM) · [Reusable workflow](../workflows/gemini-creative-track/README.md) · [One-page brand-book copy](GEMINI_BRAND_BOOK_PAGE.md)
 
 ## What we made together in these conversations
 
@@ -66,6 +66,6 @@ This is a repository product decision, **not evidence that Gemini caused or auth
 
 ## Submission route
 
-Use the **development walkthrough** as the principal whole-project Gemini link and the **toolkit dialogue** as evidence of a visible human-feedback turning point. Put the [one-page Agent Log](GEMINI_BRAND_BOOK_PAGE.md) in the brand book and keep this GitHub document as the detailed appendix. The working process page is a supplementary illustration, not a substitute for the shared conversations.
+Display the three records as **Prompt 01, Prompt 02 and Prompt 03**, each with its own citation in the [Prompt showcase](../workflows/gemini-creative-track/PROMPTS.md#prompt-showcase). They remain separate conversations; no combined Gemini link or continuous transcript is required. Put the [one-page Agent Log](GEMINI_BRAND_BOOK_PAGE.md) in the brand book and use this document as the detailed appendix. The working process page is supplementary.
 
 The [evidence manifest](../workflows/gemini-creative-track/evidence.json) pins the inspected source and preserves all three submitted share URLs plus their observed canonical destinations. [Decision records](../workflows/gemini-creative-track/DECISIONS.csv) distinguish actual dialogue, repository records and proposed future work.

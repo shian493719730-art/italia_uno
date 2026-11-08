@@ -108,5 +108,10 @@
     "workflows/gemini-creative-track/verify-evidence.mjs",
     "docs/DEMO_MEDIA.md",
     "workflows/gemini-creative-track/demo-media.json"
-  ]
+  ],
+  "presentation": {
+    "format": "three independent prompt summaries with inline citations",
+    "combined_conversation": false,
+    "prompt_showcase": "workflows/gemini-creative-track/PROMPTS.md#prompt-showcase"
+  }
 }

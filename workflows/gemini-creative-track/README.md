@@ -4,13 +4,11 @@
 
 This workflow packages three genuine Gemini discussions and an independently checked source map. Gemini leads the drafting/critique stage; people supply the brief, constraints, references and decisions. It is a **retrospective reconstruction around an existing game**, not a newly invented historical development transcript.
 
-## Read in this order
+## Prompt display and references
 
-1. [Whole-project walkthrough](https://share.gemini.google/6HcePfZERAVp): the principal Gemini record, with illustrative subsystem/code discussion and a factual correction.
-2. [Toolkit dialogue](https://share.gemini.google/1ol6yl0YbhvM): the clearest visible feedback turn, from a narrow summary to a complete toolkit/hand-in narrative.
-3. [Detailed agent log](../../docs/GEMINI_AGENT_LOG.md): actual scope, corrected paths/colours and the separate repository product pivot.
-4. [Demo media and supplemental explanation](../../docs/DEMO_MEDIA.md): four recordings, provenance and earlier UI references.
-5. [One-page copy](../../docs/GEMINI_BRAND_BOOK_PAGE.md): a compact brand-book spread.
+Start with the [Prompt showcase and citations](PROMPTS.md#prompt-showcase). Three short prompt summaries carry three independent citations: toolkit framing [1], whole-game explanation [2], and code-visible postcard explanation [3]. Keep the original shared conversations separate; no combined link or transcript is needed.
+
+Then consult the [detailed agent log](../../docs/GEMINI_AGENT_LOG.md), [demo media index](../../docs/DEMO_MEDIA.md) and [one-page brand-book plan](../../docs/GEMINI_BRAND_BOOK_PAGE.md).
 
 ## Repeatable loop
 

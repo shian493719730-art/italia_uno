@@ -2,15 +2,39 @@
 
 The first section summarises prompts visible in the real shared sessions. It is not a verbatim export. The reusable prompts below are newly assembled for this workflow and must not be presented as messages from a historical conversation.
 
-## Recorded prompt progression
+## Prompt showcase
 
-| Shared session | Human request / correction | Visible result |
-| --- | --- | --- |
-| [Toolkit](https://share.gemini.google/1ol6yl0YbhvM) | Start with a source-grounded one-page design summary. | Outcome-focused initial draft. |
-| Same session | Redirect attention to the whole toolkit, required hand-ins and the agent log. | Broader workflow and presentation structure. |
-| Same session | Distinguish current dialogue, source artifacts and proposed external tool use. | Explicit provenance/status labels and narrower authorship language. |
-| [Walkthrough](https://share.gemini.google/6HcePfZERAVp) | Explain how an agent could assist across the whole existing game, using real modules and snippets. | An illustrative development walkthrough. |
-| Same session | Remove unsupported historical authorship, inspection and successful-execution claims. | Revised hypothetical workflow, with implementation history kept separate. |
+The three conversations remain separate. Each entry below summarises the prompt's purpose and cites its own shared record. These are **editorial summaries, not verbatim prompt exports or a combined conversation**.
+
+### Prompt 01 — frame the creative toolkit
+
+Explain the Italia Uno project through the complete Creative Track toolkit, required hand-ins and agent log; distinguish observed work from proposed tool use. [1]
+
+**Human feedback shown:** move beyond a single design-summary page, then clarify evidence and attribution. **Use in the submission:** strategy, workflow framing and the visible feedback/revision sequence.
+
+### Prompt 02 — explain the whole game
+
+Create a source-grounded, illustrative walkthrough of how an agent could assist across the existing customer journey, menu, receipt, owner game, scenes, sound and publishing. [2]
+
+**Human feedback shown:** remove unsupported claims of historical authorship or executed checks. **Use in the submission:** architecture and development-process explanation, with the real implementation record kept separate.
+
+### Prompt 03 — show the code and design pivot
+
+Explain the optional postcard design with a hypothetical agent loop, a system map and supplied source excerpts, using indirect speech rather than invented historical dialogue. [3]
+
+**Use in the submission:** a code-visible explanation alongside the independently supplied demo recordings. This reference is a shared text conversation; the MP4s remain separate media files.
+
+### Prompt citations
+
+[1] [Gemini — Italia Uno Brand-Book Summary](https://share.gemini.google/1ol6yl0YbhvM). Shared conversation supplied by the team; reviewed 8 November 2026.
+
+[2] [Gemini — Italia Uno Development Walkthrough](https://share.gemini.google/6HcePfZERAVp). Shared conversation supplied by the team; reviewed 8 November 2026.
+
+[3] [Gemini — Italia Uno AI Development Walkthrough](https://share.gemini.google/Hy46LuagOWu3). Shared conversation supplied alongside demo recordings; reviewed 8 November 2026.
+
+## Reusable prompts
+
+The following prompts are newly assembled templates for future work, separate from the three cited conversations above.
 
 ## Reusable prompt 1 — project context
 
@@ -61,7 +85,7 @@ Do not invent why the historical product pivot happened.
 
 ```text
 Prepare an agent log, a one-page brand-book copy/layout plan and an evidence index.
-Use the two real Gemini share links provided by the team. Map each major claim
+Cite the three separate Gemini share links provided by the team. Map each major claim
 to the visible conversation or a pinned source file/commit.
 Label Canva, Nano Banana, Gems, Brand Kit and Magic Studio uses as proposed
 unless I provide actual artifacts. A workflow file is not proof of a run.
