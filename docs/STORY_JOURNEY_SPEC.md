@@ -1,3 +1,8 @@
+> **Status (8 November 2026): replaced.** After trying it, the team chose a different design. The original
+> 5-second meal stays as it was, and a postcard on the noticeboard swings with a "Click me!" bubble. Clicking it
+> opens an optional hide-and-seek in three imagined rooms (Bari, Soho 1987, Charlotte Street 1996), with no quizzes.
+> See `lib/postcard-game.mjs`, `app/postcard-game.tsx` and `tests/postcard.test.mjs`. This spec is kept for reference.
+
 # Feature spec: "The Postcard That Fell" — interactive story at My table
 
 ## Goal

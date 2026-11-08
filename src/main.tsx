@@ -4,5 +4,5 @@ import '../app/globals.css';
 import '../app/handdrawn.css';
 import '../app/mobile.css';
 import '../app/welcome.css';
-import '../app/story.css';
+import '../app/postcard.css';
 createRoot(document.getElementById('root')!).render(<Game/>);
