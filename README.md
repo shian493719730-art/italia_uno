@@ -2,7 +2,7 @@
 
 A handcrafted café exploration and restaurant-management game, released for anyone to run, study and remix. Indigo ink, warm paper, an animated fictional host and an original scene-aware Web Audio score.
 
-[Play the live game](https://italia-uno-first-visit.shian493719370.chatgpt.site/) · [中文说明](#中文快速开始) · [MIT license](LICENSE) · [Production workflow](docs/WORKFLOW.md)
+[Play the live game](https://z48gdcngbf-jpg.github.io/italia_uno/) · [中文说明](#中文快速开始) · [MIT license](LICENSE) · [Production workflow](docs/WORKFLOW.md)
 
 ![Desktop welcome scene](docs/images/desktop.png)
 
