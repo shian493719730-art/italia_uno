@@ -1,0 +1,10 @@
+id,evidence_type,source,before,human_review_or_audit,after,limit
+D1,actual_dialogue,toolkit,Outcome-focused summary,Human redirected scope toward toolkit and agent log,Workflow/hand-in mapping,Gemini drafting session; not historical implementation
+D2,actual_dialogue,toolkit,Tool use presented too strongly,Human requested evidence statuses and no unsupported claims,Observed/proposed categories separated,No claim that a Canva deck or campaign was exported
+D3,actual_dialogue,walkthrough,Illustrative development explanation,Human removed execution/authorship overclaims,Hypothetical workflow explicitly labelled,Not a historical development transcript
+D4,repository_evidence,f7b1d8130595feab8bb9b3ded1a13d11d90f8925,Guided facts/quizzes/four-bite proposal,Repository records replacement,Meal preserved; optional three-room postcard search,Separate from later Gemini discussion
+D5,source_audit,b36d7c76dbcc2ebb901f605e616406210f37b9a0,Gemini named non-existent locale paths,Checked actual source tree,lib/locales.mjs plus inline copy and lib/it and lib/ja,Documentation correction; no game edit
+D6,source_audit,b36d7c76dbcc2ebb901f605e616406210f37b9a0,Illustrative palette and physics wording,Checked Bistro CSS and reducer,Actual palette; state transitions and guards,No physics-engine claim
+D7,proposed_next_step,toolkit,Brand-book/campaign plan,No export reviewed,Use copy plan for the next deliverable,Not marked completed
+D8,actual_dialogue,demo-walkthrough,Additional development outline supplied with media,Read the visible share page,Third record linked as supplementary explanation,Text conversation; not video hosting or historical authorship
+D9,media_review,demo-media.json,Four recordings and two earlier screenshots,Inspect native metadata and three frames per clip,Label viewing order and preserve originals with hashes,Audio and full playback not reviewed; exact recording commit unknown
