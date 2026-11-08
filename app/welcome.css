@@ -2,18 +2,18 @@
 .welcome-explore-note{display:none}
 @media(min-width:761px){
  .outside.format-layout .frame-outside .format-room-stage{display:grid;grid-template-columns:minmax(250px,300px) minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:24px;padding:24px;overflow:hidden}
- .outside.format-layout .frame-outside .format-scene-slot{position:relative;inset:auto;grid-column:2;grid-row:1;min-width:0;min-height:0;border-left:1px solid #0b2b6c20}
+ .outside.format-layout .frame-outside .format-scene-slot{position:relative;inset:auto;grid-column:2;grid-row:1;min-width:0;min-height:0;border-left:1px solid #17307f20}
  .outside.format-layout .frame-outside .format-stage-notice{display:none}
- .outside.format-layout .outside-dialogue{position:relative;inset:auto;grid-column:1;grid-row:1;align-self:center;display:flex;flex-direction:column;align-items:stretch;gap:24px;width:100%;max-width:none;min-height:0;margin:0!important;padding:26px 22px;border:1px solid #0b2b6c50;border-radius:12px 16px 12px 14px;background:#f8efdc;box-shadow:0 3px 0 #0b2b6c0c;overflow-wrap:anywhere}
+ .outside.format-layout .outside-dialogue{position:relative;inset:auto;grid-column:1;grid-row:1;align-self:center;display:flex;flex-direction:column;align-items:stretch;gap:24px;width:100%;max-width:none;min-height:0;margin:0!important;padding:26px 22px;border:1px solid #17307f50;border-radius:12px 16px 12px 14px;background:#f8efdc;box-shadow:0 3px 0 #17307f0c;overflow-wrap:anywhere}
  .outside.format-layout .outside-dialogue:before{display:none}
  .outside.format-layout .outside-dialogue .speaker-art{display:none}
- .outside.format-layout .outside-dialogue .speaker-label{font:600 9px/1.5 var(--sans);letter-spacing:1.1px;margin:0 0 14px;color:#616981}
+ .outside.format-layout .outside-dialogue .speaker-label{font:600 9px/1.5 var(--sans);letter-spacing:1.1px;margin:0 0 14px;color:#5b5e8e}
  .outside.format-layout .outside-dialogue h2,html[lang='zh'] .outside.format-layout .outside-dialogue h2{font-size:27px;line-height:1.3;margin:0 0 16px;letter-spacing:-.25px}
  .outside.format-layout .outside-dialogue p{font:400 14px/1.7 var(--sans);max-width:none;margin:0}
- .outside.format-layout .outside-dialogue .welcome-explore-note{display:block;margin-top:22px;padding-top:17px;border-top:1px solid #0b2b6c25;font:400 12px/1.6 var(--sans);color:#616981}
+ .outside.format-layout .outside-dialogue .welcome-explore-note{display:block;margin-top:22px;padding-top:17px;border-top:1px solid #17307f25;font:400 12px/1.6 var(--sans);color:#5b5e8e}
  .outside.format-layout .outside-dialogue .dialogue-actions{display:block;width:100%;min-width:0;max-width:none;margin:0}
  .outside.format-layout .outside-dialogue .primary{font-size:18px;line-height:1.4;min-height:50px;padding:12px;width:100%}
- .outside.format-layout .h-welcome{padding:10px 13px;min-height:44px;min-width:60px;box-shadow:0 2px 4px #0b2b6c13}
+ .outside.format-layout .h-welcome{padding:10px 13px;min-height:44px;min-width:60px;box-shadow:0 2px 4px #17307f13}
  .outside.format-layout .h-welcome>span{display:none}
  .outside.format-layout .h-welcome b{font-size:20px;line-height:1.2}
  .outside.format-layout .camera-tools{display:none}

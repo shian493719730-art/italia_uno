@@ -6,11 +6,13 @@ The repository-level MIT license covers the project's original source and origin
 
 | Font | Source | Included license |
 | --- | --- | --- |
+| Homemade Apple | https://github.com/google/fonts/tree/main/apache/homemadeapple | `public/fonts/LICENSE-HomemadeApple.txt` (Apache 2.0) |
+| Crimson Pro | https://github.com/Fonthausen/CrimsonPro | `public/fonts/OFL-CrimsonPro.txt` |
 | Leckerli One | https://github.com/google/fonts/tree/main/ofl/leckerlione | `public/fonts/OFL-LeckerliOne.txt` |
 | Caveat | https://github.com/google/fonts/tree/main/ofl/caveat | `public/fonts/OFL-Caveat.txt` |
 | Pixelify Sans | https://github.com/google/fonts/tree/main/ofl/pixelifysans | `public/fonts/OFL-PixelifySans.txt` |
 
-All three use SIL Open Font License 1.1. Leckerli One is the active Latin display font; Caveat and Pixelify Sans are retained for the earlier visual variants. Keep the font license files when redistributing the fonts. System font fallbacks are not bundled.
+Homemade Apple uses the Apache License 2.0; all other fonts use the SIL Open Font License 1.1. Homemade Apple (headlines) and Crimson Pro (text and labels) are active in the bistro edition; Leckerli One, Caveat and Pixelify Sans are retained for the earlier visual variants. Keep the font license files when redistributing the fonts. System font fallbacks are not bundled.
 
 ## Runtime and build tools
 
