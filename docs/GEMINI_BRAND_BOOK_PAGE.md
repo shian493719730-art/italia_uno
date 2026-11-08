@@ -18,14 +18,17 @@ The result is a reusable workflow connecting the customer journey, drawn space, 
 | --- | --- | --- |
 | One design-summary page | Show the creative process and full toolkit | Whole-project agent log, tool roles, evidence and hand-in plan |
 
-## Evidence strip
+## Prompt showcase and citation strip
 
-- **Principal Gemini record:** https://share.gemini.google/6HcePfZERAVp
-- **Feedback/iteration record:** https://share.gemini.google/1ol6yl0YbhvM
-- **Supplemental development explanation:** https://share.gemini.google/Hy46LuagOWu3
-- **Demo recordings/index:** `docs/DEMO_MEDIA.md` (originals in the local submission ZIP).
-- **Detailed GitHub appendix:** `docs/GEMINI_AGENT_LOG.md`
-- **Separate product pivot:** guided story proposal → optional swinging postcard; see commit `f7b1d81`.
+Use three small, parallel prompt blocks. The text below summarises each prompt; it is not a verbatim export. Keep all three original links independent.
+
+| Prompt display | Purpose | Citation |
+| --- | --- | --- |
+| **01 · Frame the toolkit** | Explain the complete creative workflow and revise it using human feedback. | [Gemini prompt record 1](https://share.gemini.google/1ol6yl0YbhvM) |
+| **02 · Explain the game** | Map the existing game and propose a source-grounded development loop. | [Gemini prompt record 2](https://share.gemini.google/6HcePfZERAVp) |
+| **03 · Make the code visible** | Explain the optional postcard design using source excerpts and a hypothetical workflow. | [Gemini prompt record 3](https://share.gemini.google/Hy46LuagOWu3) |
+
+The expanded [Prompt showcase](../workflows/gemini-creative-track/PROMPTS.md#prompt-showcase) supplies context and citation labels. The detailed appendix remains `docs/GEMINI_AGENT_LOG.md`. Demo recordings are indexed in `docs/DEMO_MEDIA.md`; they are separate from the Gemini text records. The story-to-postcard pivot is separately evidenced by commit `f7b1d81`.
 
 ## Design notes
 
