@@ -6,7 +6,7 @@
 import { useEffect, useRef, useState } from 'react';
 import HandArrow from './hand-arrow';
 import PixelHost from './pixel-host';
-import { POSTCARD_COPY, POSTCARD_SOURCE, fill } from '../lib/postcard-copy.mjs';
+import { POSTCARD_COPY, POSTCARD_SOURCE, STORY_SOURCES, ROOM_SOURCES, fill } from '../lib/postcard-copy.mjs';
 import { SEEK_ROOMS, POSTCARD_ROOM, currentRoom, roomDone } from '../lib/postcard-game.mjs';
 
 const INK = '#17307f', PAPER = '#f5ebd6', PALE = '#e6dcc4', WOOD = '#dcc6a1', GLASS = '#c7d5da', BREAD = '#d9bd8b', RED = '#c99486', SKY = '#8fb3dd', LEAF = '#b1becb', METAL = '#c9ccd1';
@@ -117,6 +117,19 @@ function RoomScene({ room, found, hintId, t, onFind, onDecoy, zoom, scrollRef })
   </div></div>;
 }
 
+// The finale: a long shared table, everyone with a plate, and an empty chair saved for the player.
+function FamilyTable({ t }) {
+  const guests = [[112, 104, SKY, 1], [176, 96, RED, 1.08], [240, 112, LEAF, .8], [432, 100, '#e3c37a', 1.04], [496, 108, '#c9b6d9', .9]];
+  return <figure className="seek-family"><svg viewBox="0 0 640 230" role="img" aria-label={t.familyAlt}><g stroke={INK} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round">
+    <path d="M70 40Q320 10 570 40" fill="none" strokeWidth="1.2"/>{[110, 220, 440, 530].map(x => <g key={x}><path d={`M${x} 30v12`} fill="none" strokeWidth="1.2"/><circle cx={x} cy="48" r="6" fill="#f6dea9"/></g>)}
+    {guests.map(([x, y, coat, s], i) => <g key={i} transform={`translate(${x} ${y}) scale(${s})`}><circle cx="0" cy="-24" r="15" fill={PAPER}/><path d="M-6 -24h1M5 -24h1" fill="none" strokeWidth="2.6"/><path d="M-5 -17q5 4 10 0" fill="none" strokeWidth="1.6"/><path d="M-20 26Q-20 -6 0 -6Q20 -6 20 26Z" fill={coat}/></g>)}
+    <g transform="translate(330 140)"><path d="M-22 -60V0M22 -60V0M-22 -60H22M-22 -36H22" fill="none" strokeWidth="2.4" strokeDasharray="5 5"/><path d="M0 -84q-8 -10 -14 -4q-6 8 14 20q20 -12 14 -20q-6 -6 -14 4Z" fill={RED}/><text x="0" y="-98" textAnchor="middle" fontSize="15" fontFamily="var(--hand)" fill={INK} stroke="none">{t.seatLabel}</text></g>
+    <path d="M40 138H600L584 156H56Z" fill={WOOD}/><path d="M80 156V214M560 156V214" fill="none" strokeWidth="3"/>
+    {[112, 176, 240, 330, 432, 496].map((x, i) => <g key={x}><ellipse cx={x} cy="134" rx="22" ry="5" fill={PAPER}/>{i !== 3 && <path d={`M${x - 11} 132Q${x} 122 ${x + 11} 132Z`} fill={BREAD}/>}</g>)}
+    <path d="M285 118v14M372 118v14" fill="none" strokeWidth="1.4"/><ellipse cx="300" cy="126" rx="7" ry="9" fill={GLASS}/><ellipse cx="358" cy="126" rx="7" ry="9" fill={GLASS}/>
+  </g></svg><figcaption><strong>{t.familyTitle}</strong><span>{t.familyText}</span></figcaption></figure>;
+}
+
 function Icon({ id }) { return <svg viewBox="-26 -28 52 56" aria-hidden="true"><g stroke={INK} strokeWidth="1.6" strokeLinejoin="round" strokeLinecap="round">{ART[id]}</g></svg>; }
 
 export default function PostcardGame({ postcard: p, lang, onAction, onSound, onClose }) {
@@ -151,6 +164,11 @@ export default function PostcardGame({ postcard: p, lang, onAction, onSound, onC
     </div>
 
     {room && <>
+      {/* Why this room: a few true lines from the reporting, then what the search means. */}
+      <aside className="seek-story" aria-label={t.storyLabel}>
+        <p><span className="seek-story-label">{t.storyLabel}</span>{t.roomStory[index]} {ROOM_SOURCES[index].map(i => <a key={i} href={STORY_SOURCES[i].href} target="_blank" rel="noopener noreferrer">{STORY_SOURCES[i].label} <HandArrow/></a>)}</p>
+        <p><span className="seek-story-label">{t.whyLabel}</span>{t.roomWhy[index]}</p>
+      </aside>
       <RoomScene room={room} found={p.found} hintId={hintId} t={t} onFind={find} onDecoy={decoy} zoom={ZOOMS[zoom]} scrollRef={scrollRef}/>
       <div className="seek-zoom-row">
         <button className="outlined-button" aria-label={t.zoomOut} disabled={zoom === 0} onClick={() => setZoom(z => Math.max(0, z - 1))}>−</button>
@@ -169,6 +187,7 @@ export default function PostcardGame({ postcard: p, lang, onAction, onSound, onC
     {p.room === POSTCARD_ROOM && <div className="seek-postcard">
       <article className="seek-card front" aria-hidden="true"><b>Un piccolo</b><b>mondo.</b><div className="seek-stamps">{t.rooms.map(name => <span key={name}>✓ {name}</span>)}</div></article>
       <article className="seek-card back"><span className="micro">{t.trueStory}</span><p>{t.fact}</p><p className="seek-source">{t.source} <a href={POSTCARD_SOURCE.href} target="_blank" rel="noopener noreferrer">{POSTCARD_SOURCE.label} <HandArrow/></a></p></article>
+      <FamilyTable t={t}/>
       <div className="seek-actions">{p.pinned ? <button className="primary" onClick={onClose}>{t.backToTable} →</button> : <button className="primary" onClick={pin}>{t.pin} →</button>}</div>
     </div>}
   </section>;
