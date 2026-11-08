@@ -4,6 +4,8 @@
 
 This workflow packages three genuine Gemini discussions and an independently checked source map. Gemini leads the drafting/critique stage; people supply the brief, constraints, references and decisions. It is a **retrospective reconstruction around an existing game**, not a newly invented historical development transcript.
 
+**Co-creator: [Zhiang Wang](https://github.com/z48gdcngbf-jpg)** — human creative direction, reference selection, interaction and art-direction feedback, and submission decisions. Project home: [z48gdcngbf-jpg/italia_uno](https://github.com/z48gdcngbf-jpg/italia_uno).
+
 ## Prompt display and references
 
 Start with the [Prompt showcase and citations](PROMPTS.md#prompt-showcase). Three short prompt summaries carry three independent citations: toolkit framing [1], whole-game explanation [2], and code-visible postcard explanation [3]. Keep the original shared conversations separate; no combined link or transcript is needed.
