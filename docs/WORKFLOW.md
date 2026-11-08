@@ -18,6 +18,10 @@ The [Gemini prompt showcase](../workflows/gemini-creative-track/PROMPTS.md#promp
 
 The [project email setup module](../workflows/email-setup/README.md) helps an authorised owner prepare one new mailbox for project services. It is a newly documented workflow, separate from the historical game implementation and Gemini records. The owner handles private signup and terms steps; ordinary navigation and mailbox verification can be assisted. The module does not create other accounts or enable publishing.
 
+## Optional follow-up — email an order receipt
+
+The [order-email workflow](../workflows/order-email/README.md) specifies direct website sending to the customer and a fixed shop/project copy. It includes a template, disabled configuration, reusable prompt and offline preview using the existing receipt model. This is planned functionality for later implementation; no account setup, UI integration or live sending is claimed.
+
 ## Reusable steps
 
 1. Gather the brief and reference material. Separate public facts, supplied creative references and fictional game mechanics.

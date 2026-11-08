@@ -112,7 +112,13 @@
     "workflows/email-setup/README.md",
     "workflows/email-setup/PROMPT.md",
     "workflows/email-setup/setup-record.example.json",
-    "workflows/email-setup/.gitignore"
+    "workflows/email-setup/.gitignore",
+    "workflows/order-email/README.md",
+    "workflows/order-email/PROMPT.md",
+    "workflows/order-email/config.example.json",
+    "workflows/order-email/.gitignore",
+    "workflows/order-email/templates/receipt.html",
+    "workflows/order-email/demo.mjs"
   ],
   "presentation": {
     "format": "three independent prompt summaries with inline citations",
@@ -131,5 +137,11 @@
     "status": "new documented procedure and reusable prompt; no live account created or signup tested",
     "path": "workflows/email-setup/README.md",
     "sources_reviewed_on": "2026-11-08"
+  },
+  "order_email": {
+    "status": "documented future integration with offline payload preview; no UI change, registration or live email sent",
+    "path": "workflows/order-email/README.md",
+    "customer_and_shop_copies": true,
+    "source_reviewed_on": "2026-11-08"
   }
 }
