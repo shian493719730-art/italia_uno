@@ -19,7 +19,8 @@ export function useSceneCamera(kind) {
             const old = projection.current, ratio = first ? 0.5 : (el.scrollLeft + width / 2) / old.worldWidth;
             // Desktop arrival frames the complete shop; phone exploration keeps its camera.
             const fitStreet = kind === 'street' && window.matchMedia('(min-width:761px)').matches;
-            const next = cameraLayout({ width, height, kind, overview: overview || fitStreet });
+            const desktop = window.matchMedia('(min-width:761px)').matches;
+            const next = cameraLayout({ width, height, kind, overview: overview || fitStreet, desktop });
             projection.current = next;
             setFrame(next);
             setPortrait(width / height < 1.15 || next.worldWidth > width + 2);
