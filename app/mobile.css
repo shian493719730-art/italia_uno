@@ -35,8 +35,8 @@
  .format-layout .hotspot:not(.h-welcome)>b{display:none}
  .format-layout .hotspot:not(.h-welcome) .px-icon{width:23px!important;height:23px!important;scale:1;flex-basis:auto}
  .format-layout .hotspot:not(.h-welcome):after{display:none}
- .format-layout .h-coffee{translate:-5px -7px}
- .format-layout .h-boss{translate:0 4px}
+ .format-layout .h-coffee{translate:0 0}
+ .format-layout .h-boss{translate:0 0}
  /* One clear entrance action lives below the picture; no duplicate card over the host. */
  .outside.format-layout .h-welcome{display:none}
  .camera-tools{inset:8px}
