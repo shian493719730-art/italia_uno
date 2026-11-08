@@ -14,6 +14,10 @@ Codex assisted with task decomposition, original Canvas/SVG/CSS drawing code, Re
 
 The [Gemini prompt showcase](../workflows/gemini-creative-track/PROMPTS.md#prompt-showcase) cites three separate shared conversations. The [supplementary agent log](GEMINI_AGENT_LOG.md) records their later drafting and critique contribution. Canva brand-book/campaign plans remain separate deliverables; a completed export is not claimed. Contributor roles from the earlier Cambridge Pledge project are not silently assigned to this new project.
 
+## Optional account preparation
+
+The [project email setup module](../workflows/email-setup/README.md) helps an authorised owner prepare one new mailbox for project services. It is a newly documented workflow, separate from the historical game implementation and Gemini records. The owner handles private signup and terms steps; ordinary navigation and mailbox verification can be assisted. The module does not create other accounts or enable publishing.
+
 ## Reusable steps
 
 1. Gather the brief and reference material. Separate public facts, supplied creative references and fictional game mechanics.
