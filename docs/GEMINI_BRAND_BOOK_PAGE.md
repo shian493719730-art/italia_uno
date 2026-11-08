@@ -22,6 +22,8 @@ The result is a reusable workflow connecting the customer journey, drawn space, 
 
 - **Principal Gemini record:** https://share.gemini.google/6HcePfZERAVp
 - **Feedback/iteration record:** https://share.gemini.google/1ol6yl0YbhvM
+- **Supplemental development explanation:** https://share.gemini.google/Hy46LuagOWu3
+- **Demo recordings/index:** `docs/DEMO_MEDIA.md` (originals in the local submission ZIP).
 - **Detailed GitHub appendix:** `docs/GEMINI_AGENT_LOG.md`
 - **Separate product pivot:** guided story proposal → optional swinging postcard; see commit `f7b1d81`.
 

@@ -2,7 +2,7 @@
 
 **Creative Track · reviewed 8 November 2026**
 
-[Whole-project development walkthrough](https://share.gemini.google/6HcePfZERAVp) · [Toolkit and brand-book dialogue](https://share.gemini.google/1ol6yl0YbhvM) · [Reusable workflow](../workflows/gemini-creative-track/README.md) · [One-page brand-book copy](GEMINI_BRAND_BOOK_PAGE.md)
+[Demo media and supplemental explanation](DEMO_MEDIA.md) · [Whole-project development walkthrough](https://share.gemini.google/6HcePfZERAVp) · [Toolkit and brand-book dialogue](https://share.gemini.google/1ol6yl0YbhvM) · [Reusable workflow](../workflows/gemini-creative-track/README.md) · [One-page brand-book copy](GEMINI_BRAND_BOOK_PAGE.md)
 
 ## What we made together in these conversations
 
@@ -20,6 +20,10 @@ The original implementation record remains in [WORKFLOW.md](WORKFLOW.md). This s
 | Factual correction | Further human prompts require explicit statuses and reject unsupported authorship or execution claims. | Proposed tool uses are separated from visible conversation and source evidence. |
 
 The second shared conversation applies the same discipline to the whole-project walkthrough. It includes an illustrative agent loop and code excerpts, then receives a correction removing claims of historical implementation, inspection and successful checks. Its final answer is explicitly hypothetical. We retain that boundary in this package.
+
+## Supplemental development explanation and recordings
+
+The third shared record, [Italia Uno AI Development Walkthrough](https://share.gemini.google/Hy46LuagOWu3), accompanies four supplied demo recordings. It is a text explanation with a labelled hypothetical agent loop and postcard code excerpts, not a hosted video. The [media index](DEMO_MEDIA.md) distinguishes sampled demonstration content, older interface screenshots and source evidence. This outline also repeats the locale-path error corrected below.
 
 ## A separate product pivot, evidenced in code
 
@@ -54,7 +58,7 @@ This is a repository product decision, **not evidence that Gemini caused or auth
 
 | Tool or output | Status in this package |
 | --- | --- |
-| Gemini | Two real shared sessions were opened and read. Their visible contribution is drafting, critique and feedback-driven restructuring. |
+| Gemini | Three real shared sessions were opened and read. Their visible contribution is drafting, critique and feedback-driven restructuring. |
 | React/Vite/Canvas, npm scripts and Pages YAML | Present in the inspected repository. Technical evidence is linked, not attributed retroactively to Gemini. |
 | Canva brand book and launch campaign | Proposed hand-in structures; no Canva export or finished campaign asset was reviewed here. |
 | Nano Banana, Gems, Brand Kit and Magic Studio | Proposed/reconstructed toolkit roles; no usage records are asserted. |
@@ -64,4 +68,4 @@ This is a repository product decision, **not evidence that Gemini caused or auth
 
 Use the **development walkthrough** as the principal whole-project Gemini link and the **toolkit dialogue** as evidence of a visible human-feedback turning point. Put the [one-page Agent Log](GEMINI_BRAND_BOOK_PAGE.md) in the brand book and keep this GitHub document as the detailed appendix. The working process page is a supplementary illustration, not a substitute for the shared conversations.
 
-The [evidence manifest](../workflows/gemini-creative-track/evidence.json) pins the inspected source and preserves both submitted share URLs plus their observed canonical destinations. [Decision records](../workflows/gemini-creative-track/DECISIONS.csv) distinguish actual dialogue, repository records and proposed future work.
+The [evidence manifest](../workflows/gemini-creative-track/evidence.json) pins the inspected source and preserves all three submitted share URLs plus their observed canonical destinations. [Decision records](../workflows/gemini-creative-track/DECISIONS.csv) distinguish actual dialogue, repository records and proposed future work.

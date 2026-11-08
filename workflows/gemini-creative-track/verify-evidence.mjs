@@ -8,7 +8,8 @@ const failures=[];
 const requireCheck=(condition,message)=>{if(!condition)failures.push(message);};
 requireCheck(manifest.schema_version===1,'Unsupported evidence manifest.');
 requireCheck(/^[a-f0-9]{40}$/.test(manifest.source_commit),'Source commit must be exact.');
-requireCheck(manifest.conversations.length===2,'Two reviewed Gemini sessions are required.');
+requireCheck(manifest.conversations.length>=2,'At least two reviewed Gemini sessions are required.');
+requireCheck(new Set(manifest.conversations.map(c=>c.id)).size===manifest.conversations.length,'Conversation IDs must be unique.');
 for(const c of manifest.conversations){
  const submitted=new URL(c.submitted_url),canonical=new URL(c.canonical_url);
  requireCheck(submitted.protocol==='https:'&&submitted.hostname==='share.gemini.google',`Invalid submitted share URL: ${c.id}`);
@@ -24,5 +25,11 @@ for(const item of manifest.source_tokens){
 }
 const log=readFileSync(path.join(root,'docs/GEMINI_AGENT_LOG.md'),'utf8');
 for(const c of manifest.conversations)requireCheck(log.includes(c.submitted_url),`Agent log misses ${c.id}.`);
+const media=JSON.parse(readFileSync(path.join(root,'workflows/gemini-creative-track/demo-media.json'),'utf8'));
+requireCheck(media.videos.length===4&&media.historical_stills.length===2,'Expected four demo clips and two historical stills.');
+for(const item of [...media.videos,...media.historical_stills]){
+ requireCheck(/^[a-f0-9]{64}$/.test(item.sha256)&&item.bytes>0,`Invalid media identity: ${item.id}`);
+ requireCheck(item.bundle_path.startsWith('demo-media/')&&!item.bundle_path.includes('..'),`Invalid bundle path: ${item.id}`);
+}
 if(failures.length){console.error(failures.join('\n'));process.exitCode=1;}
 else console.log(`Package references passed: ${manifest.conversations.length} share records, ${manifest.source_files.length} source files, ${manifest.package_files.length} package files. This is a local reference check, not network or game-test verification.`);

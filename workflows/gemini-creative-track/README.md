@@ -1,15 +1,16 @@
 # Gemini × Italia Uno — reusable creative workflow
 
-[Agent log](../../docs/GEMINI_AGENT_LOG.md) · [Brand-book page](../../docs/GEMINI_BRAND_BOOK_PAGE.md) · [Prompt pack](PROMPTS.md) · [Evidence](evidence.json) · [Decisions](DECISIONS.csv)
+[Agent log](../../docs/GEMINI_AGENT_LOG.md) · [Brand-book page](../../docs/GEMINI_BRAND_BOOK_PAGE.md) · [Prompt pack](PROMPTS.md) · [Evidence](evidence.json) · [Decisions](DECISIONS.csv) · [Demo media](../../docs/DEMO_MEDIA.md)
 
-This workflow packages two genuine Gemini discussions and an independently checked source map. Gemini leads the drafting/critique stage; people supply the brief, constraints, references and decisions. It is a **retrospective reconstruction around an existing game**, not a newly invented historical development transcript.
+This workflow packages three genuine Gemini discussions and an independently checked source map. Gemini leads the drafting/critique stage; people supply the brief, constraints, references and decisions. It is a **retrospective reconstruction around an existing game**, not a newly invented historical development transcript.
 
 ## Read in this order
 
 1. [Whole-project walkthrough](https://share.gemini.google/6HcePfZERAVp): the principal Gemini record, with illustrative subsystem/code discussion and a factual correction.
 2. [Toolkit dialogue](https://share.gemini.google/1ol6yl0YbhvM): the clearest visible feedback turn, from a narrow summary to a complete toolkit/hand-in narrative.
 3. [Detailed agent log](../../docs/GEMINI_AGENT_LOG.md): actual scope, corrected paths/colours and the separate repository product pivot.
-4. [One-page copy](../../docs/GEMINI_BRAND_BOOK_PAGE.md): a compact brand-book spread.
+4. [Demo media and supplemental explanation](../../docs/DEMO_MEDIA.md): four recordings, provenance and earlier UI references.
+5. [One-page copy](../../docs/GEMINI_BRAND_BOOK_PAGE.md): a compact brand-book spread.
 
 ## Repeatable loop
 
@@ -23,7 +24,7 @@ This workflow packages two genuine Gemini discussions and an independently check
 | Verify | Saved code, test logs and public links | Help identify contradictions or gaps | Execute checks separately; do not turn an AI statement into a claimed test result. |
 | Package | Actual conversations, source and decisions | Draft the agent log and presentation story | Keep observed work, reconstruction and proposals visibly distinct. |
 
-These are reusable stages. Only the two linked conversations and checked repository artifacts are claimed as observed here.
+These are reusable stages. Only the three linked conversations and checked repository artifacts are claimed as observed here.
 
 ## Creative toolkit map
 
@@ -43,6 +44,10 @@ These are reusable stages. Only the two linked conversations and checked reposit
 The linked conversation quotes the supplied brief: a Canva brand book (1920×1080, 12 required pages, up to 15), launch campaign (Instagram post, story and one chosen asset), agent log (Gemini share link plus a brand-book page), and a 3-minute pitch plus 2-minute Q&A. Treat this as the team's supplied brief, not an independently checked current rules page.
 
 This package completes the **agent-log documentation and evidence links**. It supplies a brand-book page plan. It does not claim to complete the full Canva deck, campaign or live pitch. The documented rubric is strategy 25%, identity 25%, campaign 20%, creative partnership 15%, fit for cause 15%; attach actual deliverables rather than treating a plan as completion.
+
+## Media hand-off
+
+Use the [demo index](../../docs/DEMO_MEDIA.md) and `demo-media.json` to preserve filenames, hashes, viewing order and review scope. Original recordings live in the local ZIP rather than Git history. This media delivery does not claim a new edited film or a new gameplay test.
 
 ## Package checks
 
