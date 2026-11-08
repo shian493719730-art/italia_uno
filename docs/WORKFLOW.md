@@ -27,6 +27,10 @@ The [Gemini prompt showcase](../workflows/gemini-creative-track/PROMPTS.md#promp
 9. Save an exact source snapshot and production build. Keep previous versions recoverable.
 10. For open-source distribution, remove hosting/account wrappers and private paths; add standalone tooling, license notices, documentation and a clean installation check.
 
+## Team brand and art-direction prompt
+
+The [Team Snapper art-direction prompt](ART_DIRECTION_PROMPT.md) retains the original narrative supplied by Zhiang Wang, including the brand idea, palette, lettering, physical shop details and experience goals. Its derived practical visual prompt is separately labelled for reuse. Cite this human creative source as **H1**; it is separate from the Gemini shared-conversation citations.
+
 ## Useful prompt patterns from the project
 
 - “Preserve the game rules, full menu, animations and saved progress; change only the presentation.”

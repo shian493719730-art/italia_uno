@@ -107,11 +107,20 @@
     "workflows/gemini-creative-track/DECISIONS.csv",
     "workflows/gemini-creative-track/verify-evidence.mjs",
     "docs/DEMO_MEDIA.md",
-    "workflows/gemini-creative-track/demo-media.json"
+    "workflows/gemini-creative-track/demo-media.json",
+    "docs/ART_DIRECTION_PROMPT.md"
   ],
   "presentation": {
     "format": "three independent prompt summaries with inline citations",
     "combined_conversation": false,
     "prompt_showcase": "workflows/gemini-creative-track/PROMPTS.md#prompt-showcase"
+  },
+  "human_art_direction": {
+    "citation_id": "H1",
+    "source": "Team Snapper, supplied by Zhiang Wang",
+    "received_on": "2026-11-08",
+    "path": "docs/ART_DIRECTION_PROMPT.md",
+    "original_preserved": true,
+    "derived_prompt_label": "New editorial adaptation; not historical Gemini dialogue"
   }
 }

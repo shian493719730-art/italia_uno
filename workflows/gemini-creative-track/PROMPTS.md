@@ -32,6 +32,12 @@ Explain the optional postcard design with a hypothetical agent loop, a system ma
 
 [3] [Gemini — Italia Uno AI Development Walkthrough](https://share.gemini.google/Hy46LuagOWu3). Shared conversation supplied alongside demo recordings; reviewed 8 November 2026.
 
+## Team Snapper art-direction prompt [H1]
+
+The team supplied a separate brand and art-direction prompt centred on **“Table for one? Table for everyone.”** It specifies homemade/together/generous, handwritten logo lettering, shop-sign blue, tomato red, paper-bag cream, tiles, flag bunting and chalkboards.
+
+Read the [original English narrative, visual rules and derived reuse prompt](../../docs/ART_DIRECTION_PROMPT.md). Cite **[H1] Team Snapper (8 November 2026), supplied by Zhiang Wang**. This human-provided source is separate from Gemini records [1]–[3]; the derived practical prompt is labelled as newly assembled.
+
 ## Reusable prompts
 
 The following prompts are newly assembled templates for future work, separate from the three cited conversations above.
