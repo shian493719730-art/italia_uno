@@ -238,7 +238,7 @@
 .format-layout .hotspot b{font-size:15px;line-height:1.15}
 .format-layout .hotspot:after{height:7px;bottom:-8px}
 .format-layout .h-coffee{translate:0 0}
-.format-layout .h-boss{translate:0 0}
+.format-layout .h-boss{translate:0 0;margin-top:0}
 .format-layout .dialogue{position:absolute;left:24px;right:24px;bottom:18px;width:auto;max-width:1150px;margin:0 auto!important;display:grid;grid-template-columns:64px minmax(0,1fr) minmax(180px,230px);align-items:center;gap:12px 22px;padding:18px 23px;z-index:4;background:#fff7eaf5;box-shadow:4px 4px #8d5f3c30;border-width:2px}
 .format-layout .dialogue .dialogue-copy{grid-column:2;grid-row:1;align-self:center}
 .format-layout .dialogue h2,.format-layout .room-guide h2{font-size:27px;line-height:1.14;margin:0 0 7px}
