@@ -1,5 +1,7 @@
 # Production and open-source workflow
 
+For a different specified game, use the independent [Custom Game Builder](../workflows/custom-game-builder/README.md) through the [workflow hub](../workflows/README.md). The notes below describe this café project; they are not mandatory rules for other games.
+
 ## Human brief and decisions
 
 **Co-creator: [Zhiang Wang](https://github.com/z48gdcngbf-jpg)** — human creative direction, reference selection, interaction and art-direction feedback, and submission decisions. Project home: [z48gdcngbf-jpg/italia_uno](https://github.com/z48gdcngbf-jpg/italia_uno).
