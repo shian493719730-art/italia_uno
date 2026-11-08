@@ -53,3 +53,11 @@ python3 -m unittest -v test_agent.py
 ## 来源
 
 此模块基于同一组织维护的 [instagram-publishing-agent](https://github.com/shian493719730-art/instagram-publishing-agent)（同步提交 `24122776bb980b0986f38ae40e5e0469d8e84c0d`）整理而来。上游尚未选择项目许可证；在重新分发或抽离本模块前，应先在上游明确许可证与归属。
+
+## More documentation
+
+- [操作协议 / Operations protocol](docs/OPERATIONS.md): how an authorised browser agent publishes and verifies a post.
+- [Loop Engineering](docs/LOOP_ENGINEERING.md): the state → decide → claim → act → verify → persist design.
+- [Daily automation prompt](docs/AUTOMATION_PROMPT.md): the prompt a scheduler sends each day.
+- [简体中文说明](README.zh-CN.md) · [Third-party notices](THIRD_PARTY_NOTICES.md).
+- Offline demo (never touches Instagram): `python3 tools/demo.py`. Example image: `node render-example.cjs`.
