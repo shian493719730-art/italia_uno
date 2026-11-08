@@ -18,6 +18,10 @@ Then consult the [detailed agent log](../../docs/GEMINI_AGENT_LOG.md), [demo med
 
 For an owner who needs a new project mailbox, follow the [email setup procedure](../email-setup/README.md) and [agent prompt](../email-setup/PROMPT.md) before account-specific work. This is a new reusable module, not a claimed action from the three historical Gemini records. It is optional and does not enable social publishing.
 
+## Optional follow-up — order receipts by email
+
+The [order-email module](../order-email/README.md) defines a later direct-send checkout flow for the customer and shop/project, with an [implementation prompt](../order-email/PROMPT.md) and offline preview. Its default is documentation only: no new mailbox, service account or live email is needed now. This added module is separate from the three cited historical Gemini discussions.
+
 ## Repeatable loop
 
 | Stage | Input | Gemini's proposed role | Human decision / output |

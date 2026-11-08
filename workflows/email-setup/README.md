@@ -53,3 +53,7 @@ Copy and fill in [PROMPT.md](PROMPT.md) when the owner actually wants to begin. 
 这是一个“协助创建项目邮箱”的可选流程：确认负责人和用途 → 选择 Gmail／Outlook → 协助命名及填写普通资料 → 本人完成密码、验证码及条款确认 → 核对新邮箱 → 记录进度。
 
 邮箱由本人或店铺负责人持有。密码、验证码及恢复资料不进入对话或 GitHub。创建邮箱不会自动注册其他平台，也不会启动 Instagram 发布。这里只新增操作流程，尚未创建任何真实邮箱。
+
+## Optional next workflow
+
+For a later checkout receipt delivered to the customer and project, use the [order-email module](../order-email/README.md). It can be documented and previewed without creating a mailbox. Account registration and live delivery remain separate future actions.

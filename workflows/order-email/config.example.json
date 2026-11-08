@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "mode": "document_only",
+  "enabled": false,
+  "provider": "emailjs",
+  "service_id": "",
+  "template_id": "",
+  "public_key": "",
+  "shop_bcc_fixed_in_provider_template": false,
+  "customer_consent_required": true,
+  "virtual_orders_only": true,
+  "marketing_subscription": false,
+  "languages": ["it", "en", "zh", "ja"]
+}
