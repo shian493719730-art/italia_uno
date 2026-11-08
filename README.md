@@ -8,6 +8,12 @@ A handcrafted café exploration and restaurant-management game, released for any
 
 **Gemini collaboration package:** [real shared sessions and agent log](docs/GEMINI_AGENT_LOG.md) · [reusable workflow and prompt pack](workflows/gemini-creative-track/README.md) · [one-page brand-book plan](docs/GEMINI_BRAND_BOOK_PAGE.md) · [demo media index](docs/DEMO_MEDIA.md). The linked sessions document retrospective drafting and review; implementation history remains separately credited.
 
+## Make a different game with this workflow
+
+**[Start at the workflow hub](workflows/README.md)** · **[Custom Game Builder](workflows/custom-game-builder/README.md)**
+
+Want an AI assistant to make a game from someone else's brief? The portable builder covers requirements, mechanics, art direction, implementation, checks and source delivery. Use its master prompt/skill and a fresh project workspace; the café game is only a case study. Email and social modules are optional. The helper prepares a handoff folder—it does not call an AI or generate game code on its own.
+
 ![Desktop welcome scene](docs/images/desktop.png)
 
 ## Run it

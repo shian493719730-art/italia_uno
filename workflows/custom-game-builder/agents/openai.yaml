@@ -1,0 +1,4 @@
+interface:
+  display_name: "Custom Game Builder"
+  short_description: "Build a playable game from a user-defined brief"
+  default_prompt: "Use $custom-game-builder to build the game described in my brief, test it, and deliver the source."
