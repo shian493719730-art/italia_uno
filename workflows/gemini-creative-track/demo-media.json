@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "received_on": "2026-11-08",
+  "supplementary_gemini_url": "https://share.gemini.google/Hy46LuagOWu3",
+  "gemini_link_type": "Shared text conversation, not a hosted video",
+  "distribution": "Original MP4 and PNG files are preserved in the local submission ZIP; this public manifest does not host them or grant a new media licence.",
+  "review_scope": "Native AVFoundation metadata and three sampled frames per clip; audio content and full playback not reviewed. Recordings are demonstration material, not automated acceptance results.",
+  "videos": [
+    {
+      "audio_tracks": 1,
+      "duration_seconds": 118.125,
+      "fps": 52.63915252685547,
+      "height": 464,
+      "id": "clip-1",
+      "original_filename": "4e5f088d-6b48-4598-90e0-262d59048b1c 2.MP4",
+      "width": 832,
+      "title": "Desktop customer visit",
+      "bundle_path": "demo-media/01-desktop-visit.mp4",
+      "bytes": 17908097,
+      "sha256": "2b6941660042b44c3a15762b0555767ab887a78787e4fafed0e2cdc92c1c3032",
+      "sampled_seconds": [
+        14.174999999999999,
+        59.0625,
+        103.95
+      ],
+      "sample_observations": [
+        "14.175s: café interior, five discovery labels and Ready to order dialogue.",
+        "59.063s: menu invitation and Make order action.",
+        "103.950s: personalised receipt and Continue & say ciao action."
+      ],
+      "version_commit": "not established from recording",
+      "presentation": "Desktop screen recording"
+    },
+    {
+      "audio_tracks": 1,
+      "duration_seconds": 11.963333333333333,
+      "fps": 57.2582893371582,
+      "height": 848,
+      "id": "clip-2",
+      "original_filename": "8f1aa8dc-1f52-4696-930d-95789b65ae52 2.MP4",
+      "width": 432,
+      "title": "Phone day/night presentation",
+      "bundle_path": "demo-media/02-phone-day-night.mp4",
+      "bytes": 1560037,
+      "sha256": "8c032e2b95df919a83c1b1a49130629b5e2bda94f599c2cb11807f59e29d58f7",
+      "sampled_seconds": [
+        1.4356,
+        5.9816666666666665,
+        10.527733333333334
+      ],
+      "sample_observations": [
+        "1.436s: phone-framed café interior in daytime; compact scene controls.",
+        "5.982s: nighttime interior with glowing lamps.",
+        "10.528s: nighttime scene, collapsed Explore card and order dialogue."
+      ],
+      "version_commit": "not established from recording",
+      "presentation": "Phone-preview recording, not independently verified as physical-device capture"
+    },
+    {
+      "audio_tracks": 1,
+      "duration_seconds": 182.24166666666667,
+      "fps": 54.60332107543945,
+      "height": 848,
+      "id": "clip-3",
+      "original_filename": "6141080e-25ee-42d7-b621-3ecb8582daea 2.MP4",
+      "width": 432,
+      "title": "Phone exploration, menu and postcard",
+      "bundle_path": "demo-media/03-phone-exploration.mp4",
+      "bytes": 33568310,
+      "sha256": "1aabd402959cf03620c7ff7c1fbd5823ee51ebe33dc95597a6f2d030927bffce",
+      "sampled_seconds": [
+        21.869,
+        91.12083333333334,
+        160.37266666666667
+      ],
+      "sample_observations": [
+        "21.869s: Find us panel with illustrated neighbourhood map and 91 Charlotte Street.",
+        "91.121s: Dolci menu and order dock showing three items.",
+        "160.373s: postcard conclusion, three location stamps and Back to my table action."
+      ],
+      "version_commit": "not established from recording",
+      "presentation": "Phone-preview recording, not independently verified as physical-device capture"
+    },
+    {
+      "audio_tracks": 1,
+      "duration_seconds": 8.401893424036281,
+      "fps": 36.26723098754883,
+      "height": 464,
+      "id": "clip-4",
+      "original_filename": "cb84424b-25a4-4ff8-9b58-82a4b8ebe481 2.MP4",
+      "width": 848,
+      "title": "Leaving the game for the real café",
+      "bundle_path": "demo-media/04-real-cafe-maps.mp4",
+      "bytes": 1198519,
+      "sha256": "ef43f3d0befc7da73d244ecaf43d4c25978d83790aaf99edca19786ef7b79595",
+      "sampled_seconds": [
+        1.0082272108843537,
+        4.2009467120181405,
+        7.393666213151928
+      ],
+      "sample_observations": [
+        "1.008s: farewell screen inside a phone-preview tool.",
+        "4.201s: Google loading transition.",
+        "7.394s: Google Maps place result for Italia Uno."
+      ],
+      "version_commit": "not established from recording",
+      "presentation": "Phone-preview recording, not independently verified as physical-device capture"
+    }
+  ],
+  "historical_stills": [
+    {
+      "id": "reference-1609",
+      "original_filename": "IMG_1609 3.PNG",
+      "bundle_path": "demo-media/historical-ui/IMG_1609.PNG",
+      "bytes": 2121634,
+      "sha256": "899721dd65a6977bae8e8d260db71afd9e9b8aaee6dd0eda6cc013e5d39c94a4",
+      "status": "Earlier interface reference; not current acceptance evidence"
+    },
+    {
+      "id": "reference-1610",
+      "original_filename": "IMG_1610 3.PNG",
+      "bundle_path": "demo-media/historical-ui/IMG_1610.PNG",
+      "bytes": 3579936,
+      "sha256": "2761f19ab6a18eac115522ad94ad786486e49973d0b7c8a0d16c0ea0e5e69254",
+      "status": "Earlier interface reference; not current acceptance evidence"
+    }
+  ]
+}

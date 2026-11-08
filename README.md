@@ -4,7 +4,7 @@ A handcrafted café exploration and restaurant-management game, released for any
 
 [Play the live game](https://italia-uno-first-visit.shian493719370.chatgpt.site/) · [中文说明](#中文快速开始) · [MIT license](LICENSE) · [Production workflow](docs/WORKFLOW.md)
 
-**Gemini collaboration package:** [real shared sessions and agent log](docs/GEMINI_AGENT_LOG.md) · [reusable workflow and prompt pack](workflows/gemini-creative-track/README.md) · [one-page brand-book plan](docs/GEMINI_BRAND_BOOK_PAGE.md). The linked sessions document retrospective drafting and review; implementation history remains separately credited.
+**Gemini collaboration package:** [real shared sessions and agent log](docs/GEMINI_AGENT_LOG.md) · [reusable workflow and prompt pack](workflows/gemini-creative-track/README.md) · [one-page brand-book plan](docs/GEMINI_BRAND_BOOK_PAGE.md) · [demo media index](docs/DEMO_MEDIA.md). The linked sessions document retrospective drafting and review; implementation history remains separately credited.
 
 ![Desktop welcome scene](docs/images/desktop.png)
 

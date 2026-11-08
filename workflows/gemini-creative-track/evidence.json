@@ -21,6 +21,15 @@
       "reviewed": true,
       "observed_contribution": "A source-grounded hypothetical development walkthrough and a factual correction.",
       "does_not_establish": "Gemini implementation, test execution or deployment of the historical code."
+    },
+    {
+      "id": "demo-walkthrough",
+      "title": "Italia Uno AI Development Walkthrough",
+      "submitted_url": "https://share.gemini.google/Hy46LuagOWu3",
+      "canonical_url": "https://gemini.google.com/share/b1b13bdf81b8",
+      "reviewed": true,
+      "observed_contribution": "Supplementary hypothetical development explanation, system map and code-visible postcard discussion supplied alongside demo recordings.",
+      "does_not_establish": "A hosted video, historical Gemini code authorship, external tool execution or a completed game test."
     }
   ],
   "product_pivot": {
@@ -86,7 +95,8 @@
     "source_references": "Local paths and selected tokens checked by verify-evidence.mjs",
     "game_tests": "Not rerun for this documentation-only change",
     "production_build": "Not rerun for this documentation-only change",
-    "canva_exports": "Not reviewed"
+    "canva_exports": "Not reviewed",
+    "demo_media": "Native metadata inspected; three sampled frames per clip reviewed. Audio content and full frame-by-frame playback were not reviewed."
   },
   "package_files": [
     "docs/GEMINI_AGENT_LOG.md",
@@ -95,6 +105,8 @@
     "workflows/gemini-creative-track/PROMPTS.md",
     "workflows/gemini-creative-track/evidence.json",
     "workflows/gemini-creative-track/DECISIONS.csv",
-    "workflows/gemini-creative-track/verify-evidence.mjs"
+    "workflows/gemini-creative-track/verify-evidence.mjs",
+    "docs/DEMO_MEDIA.md",
+    "workflows/gemini-creative-track/demo-media.json"
   ]
 }
