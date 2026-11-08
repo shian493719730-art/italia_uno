@@ -4,7 +4,8 @@ import {MENU_ITEMS,MENU_CATEGORIES} from '../lib/menu-data.mjs';
 import {makeReceipt,receiptSVG} from '../lib/receipt.mjs';
 import {initial,reduce} from '../lib/game-state.mjs';
 
-assert.deepEqual(LANGUAGES.map(x=>x.id),['it','en','zh']);
+assert.deepEqual(LANGUAGES.map(x=>x.id),['it','en','zh','ja']);
+assert.equal(normaliseLanguage('ja'),'ja');assert.equal(ui('ja','Ready to order?','准备好点单了吗？'),'ご注文はお決まりですか？');
 assert.equal(normaliseLanguage('it'),'it');assert.equal(normaliseLanguage('en'),'en');assert.equal(normaliseLanguage('zh'),'zh');assert.equal(normaliseLanguage(null),'en');assert.equal(normaliseLanguage('xx'),'en');
 assert.equal(ui('en','Ready to order?','准备好点单了吗？'),'Ready to order?');assert.equal(ui('zh','Ready to order?','准备好点单了吗？'),'准备好点单了吗？');assert.notEqual(ui('it','Ready to order?','准备好点单了吗？'),'Ready to order?');
 assert.deepEqual(withItalian({en:{button:'Back to the street'},zh:{button:'回到店外'}}).it,{button:'Torna in strada'});

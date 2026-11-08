@@ -1,0 +1,257 @@
+/* Italia Uno · Bistro edition
+   Loaded last. Three voices, used with restraint:
+   - a loose adult pen hand (Homemade Apple) for headlines only,
+   - Crimson Pro, a book serif, for reading,
+   - the same serif in spaced small capitals for labels, like a bistro menu.
+   Square corners, hairline rules, tan paper with a faint tooth, indigo ink.
+   Homemade Apple is Apache 2.0; Crimson Pro is SIL OFL. */
+@font-face{font-family:'IU Hand';src:url('/fonts/HomemadeApple.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'IU Serif';src:url('/fonts/CrimsonPro-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IU Serif';src:url('/fonts/CrimsonPro-400-normal-ext.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C0}
+@font-face{font-family:'IU Serif';src:url('/fonts/CrimsonPro-500-normal.woff2') format('woff2');font-weight:500 700;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IU Serif';src:url('/fonts/CrimsonPro-500-normal-ext.woff2') format('woff2');font-weight:500 700;font-style:normal;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C0}
+@font-face{font-family:'IU Serif';src:url('/fonts/CrimsonPro-400-italic.woff2') format('woff2');font-weight:400 700;font-style:italic;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'IU Serif';src:url('/fonts/CrimsonPro-400-italic-ext.woff2') format('woff2');font-weight:400 700;font-style:italic;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F,U+20A0-20AB,U+20AD-20C0}
+/* Canvas signs and boards inside the drawings use the pen hand too. */
+@font-face{font-family:'IU Brush';src:url('/fonts/HomemadeApple.woff2') format('woff2');font-weight:100 900;font-display:swap}
+
+:root{
+  --ink:#17307f;
+  --blue:#17307f;
+  --ink-soft:#45507f;
+  --ink-faint:#17307f2e;
+  --rule:#17307f40;
+  --paper:#f3eadb;
+  --paper-lift:#f7f1e6;
+  --brand-cream:#f6dea9;
+  --cream:#f7f1e6;
+  --hd-muted:#646d8f;
+  --hand:'IU Hand','Kaiti SC','STKaiti','KaiTi',cursive;
+  --sans:'IU Serif','Songti SC','STSong',Georgia,serif;
+  --mono:'IU Serif','Songti SC',Georgia,serif;
+  --ui-serif:var(--sans);--pixel:var(--sans);--serif:var(--sans);
+  /* A faint, warm paper tooth — felt more than seen. */
+  --tooth:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='t'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .4 0 0 0 0 .28 0 0 0 -1.4 .9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23t)'/%3E%3C/svg%3E");
+  --hd-paper-noise:none;
+}
+html[lang='zh']{--hand:'Kaiti SC','STKaiti','KaiTi','Songti SC',serif}
+
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+body:after{content:'';position:fixed;inset:0;z-index:2147483000;pointer-events:none;background-image:var(--tooth);background-size:300px;mix-blend-mode:multiply;opacity:.2}
+.adventure.format-layout{background:var(--paper)}
+.format-room-stage,.frame-room .format-room-stage{background:var(--paper)}
+
+/* ── Type roles ─────────────────────────────────────────────── */
+.format-layout .dialogue h2,.format-layout .room-guide h2,.counter-speech>p,.sheet h2,
+.menu-book h3,.shift-game h2,.outside.format-layout .outside-dialogue h2,.format-layout .wordmark-name{
+  font-family:var(--hand)!important;font-weight:400!important;letter-spacing:0!important;filter:url(#iu-pen);
+}
+.format-layout .dialogue h2,.format-layout .room-guide h2{font-size:26px;line-height:1.55;margin-bottom:4px}
+.outside.format-layout .outside-dialogue h2,html[lang='zh'] .outside.format-layout .outside-dialogue h2{font-size:30px;line-height:1.5;margin:0 0 14px}
+.sheet h2{font-size:28px;line-height:1.5}
+.counter-speech>p{font-size:18px!important;line-height:1.65!important;padding-right:6px}
+.shift-game h2{font-size:clamp(24px,2.8vw,32px)!important;line-height:1.5!important}
+/* Secondary headings: quiet sans, not handwriting. */
+.sheet h3,.sheet h4,.menu-book-sections h4,.menu-book-item h5,.format-menu-list>section>h3,
+.shift-game h3,.shift-game h4{font-family:var(--sans)!important;font-weight:500!important;letter-spacing:-.01em;filter:none}
+.format-dish-add>span{font-family:var(--sans);font-weight:500;font-size:19px;letter-spacing:-.01em;filter:none}
+.format-dish-add>span>small{font-weight:400}
+.format-menu-total>div strong,.shift-stats strong{font-family:var(--sans)!important;font-weight:500;letter-spacing:-.02em;filter:none}
+.format-layout .dialogue p,.counter-caption,.sheet>p,.small-note,.fact-list li,
+.outside.format-layout .outside-dialogue p{font-family:var(--sans);font-size:17px;line-height:1.55;color:var(--ink-soft)!important}
+/* Labels: small spaced mono capitals. */
+.format-layout .speaker-label,.counter-speech>span,.micro,.sheet .micro,.shift-game .shift-eyebrow,
+.outside.format-layout .outside-dialogue .speaker-label,.cafe-pages small,.format-layout .game-footer,
+.format-layout .game-footer button,.menu-book-eyebrow,.menu-book-count,.format-menu>header>p,
+.menu-book-original,.menu-book-sections h4>span,.shift-stats small,.welcome-explore-note{
+  font-family:var(--mono)!important;font-weight:500!important;font-size:11px!important;letter-spacing:.18em!important;
+  text-transform:uppercase;color:var(--ink-soft)!important;filter:none;
+}
+.outside.format-layout .outside-dialogue .welcome-explore-note{text-transform:none;letter-spacing:.02em!important;font-size:11.5px!important;line-height:1.7}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.format-layout .game-header{background:var(--paper);border-bottom:1px solid var(--rule);box-shadow:none}
+.format-layout .game-header:before{display:none}
+.format-layout .wordmark{gap:14px;color:var(--ink);text-transform:none}
+.format-layout .wordmark-name{display:block;font-size:26px;line-height:1.3}
+.format-layout .wordmark small{font-family:var(--mono);font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-top:7px;filter:none}
+.format-layout .brand-icon{width:54px;height:54px;flex:0 0 54px}
+.format-layout .brand-icon>img{object-fit:cover;border-radius:50%}
+.format-layout .language,.format-layout .round-button{background:transparent;border:0;border-radius:0;box-shadow:none;padding:0}
+.format-layout .language{gap:2px}
+.format-layout .language button{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);background:transparent;border-radius:0;padding:6px 8px}
+.format-layout .language .active{background:transparent;color:var(--ink);box-shadow:inset 0 -1.5px var(--ink)}
+.format-layout .music-button,.format-layout .notebook-button,.format-layout .header-receipt{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.format-layout .round-button,.format-layout .music-button>b,.format-layout .notebook-button{font-family:var(--mono)}
+
+/* ── Step tabs: numbered, underlined when current ────────────── */
+.cafe-pages{background:var(--paper);border-bottom:1px solid var(--rule);gap:28px;padding-top:4px;justify-content:flex-start;padding-left:4%}
+.cafe-pages>button,.cafe-page-later{
+  font-family:var(--sans);font-size:16px;font-weight:400;letter-spacing:0;color:var(--ink-soft);
+  background:transparent;border:0;border-radius:0;box-shadow:none;padding:12px 0;min-height:44px;
+}
+.cafe-pages>button:hover{background:transparent;color:var(--ink)}
+.cafe-pages>button.current{background:transparent;color:var(--ink);box-shadow:inset 0 -2px var(--ink)}
+.cafe-pages small{margin-right:2px;opacity:.75}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.primary,.format-layout .primary,.shift-game .shift-button.shift-primary{
+  background:var(--ink)!important;color:var(--brand-cream)!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+  font-family:var(--mono)!important;font-weight:500!important;font-size:13px!important;letter-spacing:.2em!important;text-transform:uppercase;
+  min-height:48px;padding:14px 22px;filter:none;
+}
+.primary:hover:not(:disabled),.format-layout .primary:hover:not(:disabled),.shift-game .shift-button.shift-primary:hover:not(:disabled){background:#0e2463!important}
+.primary:disabled,.format-layout .primary:disabled{background:#17307f40!important;color:#f7f1e6!important;opacity:1}
+.outlined-button,.shift-game .shift-button,.camera-tools button,.menu-book .menu-book-try{
+  background:transparent!important;color:var(--ink)!important;border:1px solid var(--ink)!important;border-radius:0!important;box-shadow:none!important;
+  font-family:var(--sans)!important;font-weight:500!important;font-size:14px!important;letter-spacing:0!important;
+}
+.outlined-button:hover,.shift-game .shift-button:hover:not(:disabled),.camera-tools button:hover{background:#17307f0d!important}
+.shift-game .shift-button:disabled{border-color:#17307f40!important;color:#17307f70!important;background:transparent!important}
+.quiet,.format-layout .quiet{font-family:var(--sans);font-weight:500;font-size:14px;color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-color:var(--rule)}
+.quiet:hover{text-decoration-color:var(--ink)}
+.menu-mode-tabs button,.menu-book .menu-book-tabs button,.format-layout .format-menu>header>nav>button{
+  background:transparent!important;color:var(--ink-soft)!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+  font-family:var(--sans)!important;font-weight:500!important;font-size:15px!important;border-bottom:1px solid var(--rule)!important;
+}
+.menu-mode-tabs .active,.menu-book .menu-book-tabs button.active,.format-layout .format-menu>header>nav>button.active{
+  color:var(--ink)!important;border-bottom:2px solid var(--ink)!important;
+}
+.format-layout .format-menu>header>nav>button span,.menu-book-tabs button span{font-family:var(--mono);font-size:10px;letter-spacing:.08em}
+
+/* ── Surfaces: lifted paper, hairline edge, no rounding ──────── */
+.format-layout .dialogue,.format-layout .counter-speech,.sheet,.format-layout .format-menu,.toast,
+.format-layout .hotspot,.outside.format-layout .outside-dialogue,.format-stage-notice,
+.shift-panel,.shift-upgrade-card,.shift-order-forecast,.shift-station,.shift-rules,.shift-final-banner,.shift-real-visit,.shift-ticket{
+  background:var(--paper-lift)!important;background-image:none!important;border:1px solid var(--rule)!important;border-radius:0!important;box-shadow:none!important;
+}
+.format-layout .dialogue:before{display:none}
+.outside.format-layout .outside-dialogue{background:transparent!important;border:0!important;padding:8px 6px 8px 2px}
+.format-layout .speaker-art,.customer-host-art,.format-layout .customer-host-art{background:transparent!important;border:0!important;box-shadow:none!important}
+.sheet{box-shadow:0 30px 60px -20px #17307f40!important}
+.sheet-mask{background:#3d342633}
+.sheet-close{background:transparent;border:1px solid var(--rule);border-radius:50%;color:var(--ink);font-family:var(--sans);font-weight:300}
+.format-layout .hotspot{background:#f7f1e6f2!important;padding:7px 12px 7px 10px}
+.format-layout .hotspot b{font-family:var(--sans);font-size:16px;font-weight:500;font-style:italic;letter-spacing:-.005em;filter:none}
+.format-layout .hotspot:hover{background:var(--ink)!important;color:var(--paper)!important;border-color:var(--ink)!important}
+.format-layout .hotspot:hover *{color:var(--paper)!important}
+.format-layout .hotspot:after{background:var(--ink);width:1px}
+.format-stage-notice:before{content:none}
+.format-stage-notice{padding:9px 14px;font-family:var(--sans)!important;font-size:13px!important;font-weight:400!important;color:var(--ink-soft)!important;max-width:none!important;filter:none!important}
+.format-layout .format-dish-add{background:transparent!important;border:0!important;border-bottom:1px solid var(--rule)!important;border-radius:0!important;box-shadow:none!important}
+.format-layout .format-dish-add:hover:not(:disabled){background:#17307f08!important}
+.format-layout .format-menu-total{background:var(--paper)!important;border-color:var(--rule)!important}
+.format-layout .format-menu>header{background:transparent!important;border-color:var(--rule)!important}
+.menu-book-search,.format-layout .format-menu-search{background:transparent!important;border:0!important;border-bottom:1px solid var(--rule)!important;border-radius:0!important;box-shadow:none!important}
+.source-label,.menu-book-reference,.menu-book-source,.reference-notes,.story-source{background:transparent!important;border:0!important;border-left:1px solid var(--ink)!important;color:var(--ink-soft)!important;border-radius:0!important}
+.boss-intro-art,.detail-illustration{background:transparent;border:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);border-radius:0}
+.boss-intro-art>span{font-family:var(--hand);font-size:24px;color:var(--ink);filter:url(#iu-pen)}
+.shift-stats{background:transparent!important;border:1px solid var(--rule)!important;box-shadow:none!important}
+.shift-stats>div{border-color:var(--rule)!important}
+.shift-fictional,.shift-rule-note,.shift-abstract{border-left-color:var(--ink)!important;background:transparent!important}
+.shift-ticket-selected{border-color:var(--ink)!important;background:#17307f0a!important}
+.task-list button>span{border-radius:50%}
+.sheet textarea{background:repeating-linear-gradient(transparent 0 30px,var(--rule) 30px 31px);border:0;border-bottom:1px solid var(--rule);border-radius:0;font-family:var(--hand);font-size:15px;line-height:31px}
+
+/* Menu book and owner game share the reading voice; receipts keep till type. */
+.menu-book-reference>span,.menu-book-tabs button span,.shift-game,.shift-forecast-dishes b,.shift-next-orders b,
+.shift-counter-front,.shift-station-info>small,.shift-final-stats strong,.shift-shop-mini>i{font-family:var(--sans)!important}
+.shift-forecast-dishes b,.shift-next-orders b{font-weight:500;font-size:14px}
+
+.format-layout .game-footer{background:var(--paper);border-top:1px solid var(--rule)}
+
+@media (max-width:700px){
+  .format-layout .wordmark-name{font-size:21px}
+  .format-layout .wordmark small{display:none}
+  .format-layout .brand-icon{width:38px;height:38px;flex-basis:38px}
+  .format-layout .dialogue h2,.format-layout .room-guide h2,.sheet h2{font-size:22px}
+  .cafe-pages{gap:16px;padding-left:16px;overflow-x:auto}
+  .cafe-pages>button{white-space:nowrap;font-size:13px}
+}
+.boss-intro-art>span{text-transform:lowercase}
+@media (max-width:760px){
+  .format-layout details,.format-layout .mobile-explore,.format-layout [class*='mobile-'] {border-radius:0!important;box-shadow:none!important}
+  .format-layout .game-footer{font-size:9.5px!important;letter-spacing:.1em!important}
+}
+
+/* Japanese: Latin stays in Homemade Apple / Crimson Pro; kana and kanji fall back
+   to an elegant Mincho serif rather than the Chinese Kaiti stack. */
+html[lang='ja']{
+  --hand:'IU Hand','Hiragino Mincho ProN','Yu Mincho','YuMincho','Noto Serif JP','BIZ UDPMincho',serif;
+  --sans:'IU Serif','Hiragino Mincho ProN','Yu Mincho','YuMincho','Noto Serif JP','BIZ UDPMincho',serif;
+  --mono:var(--sans);
+}
+html[lang='ja'] .format-layout .dialogue h2,html[lang='ja'] .sheet h2,html[lang='ja'] .outside.format-layout .outside-dialogue h2{line-height:1.45;letter-spacing:.04em!important}
+html[lang='ja'] .format-layout .speaker-label,html[lang='ja'] .micro{letter-spacing:.12em!important}
+/* Counter view: the speech bubble sits on the open wall to the owner's right,
+   so the three menu boards stay readable. */
+@media (min-width:761px){
+  .format-layout .counter-speech{top:41%!important;left:auto!important;right:3%!important;width:34%!important;max-width:290px!important}
+  .format-layout .counter-speech:after{left:-7px!important;right:auto!important;bottom:auto!important;top:46%!important;transform:rotate(135deg)}
+}
+.mobile-language-select{min-width:74px!important;width:auto!important}
+
+/* ── Cosy game feel: rounded, chunky, a little bouncy ─────────────────── */
+:root{--spring:cubic-bezier(.34,1.56,.64,1);--r-lg:22px;--r-md:16px;--r-pill:999px;--lift:0 3px 0 #17307f26}
+@keyframes iu-pop{0%{opacity:0;transform:scale(.86) translateY(8px)}70%{opacity:1;transform:scale(1.03)}100%{transform:none}}
+@keyframes iu-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.primary,.format-layout .primary,.shift-game .shift-button.shift-primary{
+  border-radius:var(--r-pill)!important;box-shadow:0 4px 0 #0c1d55!important;transition:transform .25s var(--spring),box-shadow .15s ease,background .15s ease!important;
+}
+.primary:hover:not(:disabled),.format-layout .primary:hover:not(:disabled){transform:translateY(-2px) scale(1.02);box-shadow:0 6px 0 #0c1d55!important}
+.primary:active:not(:disabled),.format-layout .primary:active:not(:disabled){transform:translateY(3px);box-shadow:0 1px 0 #0c1d55!important}
+.outlined-button,.shift-game .shift-button,.camera-tools button,.menu-book .menu-book-try,.quiet.outlined{
+  border-radius:var(--r-pill)!important;border-width:1.5px!important;box-shadow:var(--lift)!important;transition:transform .25s var(--spring)!important;
+}
+.outlined-button:hover,.shift-game .shift-button:hover:not(:disabled),.camera-tools button:hover{transform:translateY(-2px)}
+.format-layout .dialogue,.format-layout .counter-speech,.sheet,.format-layout .format-menu,.toast,.format-stage-notice,
+.shift-panel,.shift-upgrade-card,.shift-order-forecast,.shift-station,.shift-rules,.shift-final-banner,.shift-real-visit,.shift-ticket,.shift-stats{
+  border-radius:var(--r-lg)!important;border-width:1.5px!important;box-shadow:0 4px 0 #17307f14,0 14px 30px -18px #17307f40!important;
+}
+.format-layout .dialogue,.format-layout .counter-speech,.sheet,.toast{animation:iu-pop .45s var(--spring) both}
+.format-stage-notice{border-radius:var(--r-pill)!important}
+.format-layout .hotspot{
+  border-radius:var(--r-pill)!important;border-width:1.5px!important;box-shadow:var(--lift)!important;
+  animation:iu-pop .5s var(--spring) both,iu-bob 3.2s ease-in-out 1s infinite;transition:background .15s ease,color .15s ease;
+}
+.format-layout .hotspot:nth-of-type(2){animation-delay:.06s,1.4s}.format-layout .hotspot:nth-of-type(3){animation-delay:.12s,1.8s}
+.format-layout .hotspot:nth-of-type(4){animation-delay:.18s,2.2s}.format-layout .hotspot:nth-of-type(5){animation-delay:.24s,2.6s}
+.format-layout .hotspot:hover{animation-play-state:paused}
+/* The scene sits in a soft rounded frame. */
+.format-layout .format-scene-slot canvas,.format-layout .scene-world>canvas{border-radius:var(--r-lg)}
+.format-layout .format-scene-slot{border-radius:var(--r-lg)}
+/* Tabs become soft pills. */
+.cafe-pages>button{border-radius:var(--r-pill)!important;padding:8px 16px!important;min-height:40px;margin:6px 0;transition:transform .25s var(--spring),background .15s ease}
+.cafe-pages>button.current{box-shadow:none!important;background:var(--ink)!important;color:var(--brand-cream)!important}
+.cafe-pages>button:hover:not(.current){background:#17307f10!important;transform:translateY(-1px)}
+.menu-mode-tabs button,.menu-book .menu-book-tabs button,.format-layout .format-menu>header>nav>button{border-radius:var(--r-pill)!important;border:0!important}
+.menu-mode-tabs .active,.menu-book .menu-book-tabs button.active,.format-layout .format-menu>header>nav>button.active{background:var(--ink)!important;color:var(--brand-cream)!important;border:0!important}
+.format-layout .language button{border-radius:var(--r-pill)}
+.format-layout .language .active{background:var(--ink);color:var(--brand-cream);box-shadow:none}
+.format-layout .format-dish-add{border-radius:var(--r-md)!important;transition:transform .25s var(--spring),background .15s ease}
+.format-layout .format-dish-add:hover:not(:disabled){transform:translateX(3px)}
+.menu-book-search,.format-layout .format-menu-search,.sheet textarea{border-radius:var(--r-pill)!important;border:1.5px solid var(--rule)!important;padding-left:12px!important}
+.sheet-close{transition:transform .3s var(--spring)}.sheet-close:hover{transform:rotate(90deg) scale(1.08)}
+.format-layout .format-menu-total{border-radius:0 0 var(--r-lg) var(--r-lg)!important}
+@media (prefers-reduced-motion:reduce){.format-layout .hotspot,.format-layout .dialogue,.format-layout .counter-speech,.sheet,.toast{animation:none!important}.primary:hover:not(:disabled){transform:none}}
+.format-layout .language button,.format-layout .language .active{border-radius:var(--r-pill)!important;padding:6px 10px!important}
+.cafe-pages>button.current small{color:var(--brand-cream)!important;opacity:.7}
+
+/* Day clock: a soft pill with the time and a sun / half-moon. */
+.day-clock{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 14px 0 8px;margin-right:6px;border:1.5px solid var(--rule);border-radius:999px;background:var(--paper-lift);color:var(--ink);box-shadow:0 3px 0 #17307f1f;cursor:pointer;transition:transform .3s var(--spring),background .2s ease}
+.day-clock:hover{transform:translateY(-2px)}
+.day-clock:active{transform:translateY(2px);box-shadow:0 1px 0 #17307f1f}
+.day-clock-icon{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#fff7e3}
+.day-clock-icon svg{width:26px;height:26px;transition:transform .5s var(--spring)}
+.day-clock:hover .day-clock-icon svg{transform:rotate(-12deg) scale(1.08)}
+.day-clock-time{font-family:var(--sans);font-weight:500;font-size:16px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.day-clock small{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.day-clock.phase-night{background:#1f2a5c;color:#f6dea9;border-color:#1f2a5c}
+.day-clock.phase-night .day-clock-icon{background:#2c3a78}
+.day-clock.phase-night small{color:#f6dea9cc}
+.day-clock.phase-dusk .day-clock-icon{background:#fde3cf}
+/* Night: the room goes cosy, the page warms a touch. */
+html[data-daytime='night'] body{background:#ebdfc8}
+html[data-daytime='night'] .format-layout .format-room-stage{background:#e7dac1}
+html[data-daytime='night'] .format-layout .format-scene-slot canvas{box-shadow:0 0 0 1px #17307f22,0 20px 60px -30px #ffb75e88}
+@media (max-width:700px){.day-clock{height:36px;padding:0 10px 0 6px}.day-clock-time{font-size:14px}.day-clock small{display:none}}

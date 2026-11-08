@@ -9,7 +9,7 @@ import PixelHost from './pixel-host';
 import { POSTCARD_COPY, POSTCARD_SOURCE, fill } from '../lib/postcard-copy.mjs';
 import { SEEK_ROOMS, POSTCARD_ROOM, currentRoom, roomDone } from '../lib/postcard-game.mjs';
 
-const INK = '#0b2b6c', PAPER = '#f5ebd6', PALE = '#e6dcc4', WOOD = '#dcc6a1', GLASS = '#c7d5da', BREAD = '#d9bd8b', RED = '#c99486', SKY = '#8fb3dd', LEAF = '#b1becb', METAL = '#c9ccd1';
+const INK = '#17307f', PAPER = '#f5ebd6', PALE = '#e6dcc4', WOOD = '#dcc6a1', GLASS = '#c7d5da', BREAD = '#d9bd8b', RED = '#c99486', SKY = '#8fb3dd', LEAF = '#b1becb', METAL = '#c9ccd1';
 const W = 640, H = 400;
 const ZOOMS = ['fit', 'mid', 'close']; // phone zoom levels (app/postcard.css)
 

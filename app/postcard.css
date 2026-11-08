@@ -1,16 +1,19 @@
 /* The swinging postcard (lib/postcard-game.mjs, app/postcard-game.tsx).
    1) The postcard on the My table noticeboard (app/visit-vignette.tsx).
-   2) The hide-and-seek pop-up. */
+   2) The hide-and-seek pop-up.
+   Styled in the bistro edition's language (app/bistro.css, loaded after this file): navy ink on tan paper,
+   Homemade Apple headlines, Crimson Pro small-capital labels, pills with a pressable lip, springy pop-ins.
+   Buttons (.primary, .outlined-button) get their look from bistro.css. */
 
 /* 1. The card hangs from its pin and gets a little nudge every few seconds: a quick swing that settles,
    then a rest. A "Click me!" bubble beside it tells players what to do. --u is the scene scale (set in JS). */
-.board-postcard{position:absolute;z-index:3;display:grid;place-items:center;margin:0;padding:0;color:#0b2b6c;background:#f5ebd6;border:calc(var(--u,1)*1px) solid #0b2b6c;border-radius:2px;box-shadow:calc(var(--u,1)*2px) calc(var(--u,1)*3px) 0 #0b2b6c24;font:400 calc(var(--u,1)*13px)/1.05 var(--hand);transform-origin:50% 7%;animation:postcard-swing 3.2s ease-in-out infinite;cursor:pointer;will-change:transform}
-.board-postcard>i{position:absolute;top:calc(var(--u,1)*2px);left:50%;width:calc(var(--u,1)*5px);height:calc(var(--u,1)*5px);margin-left:calc(var(--u,1)*-2.5px);background:#0b2b6c;border-radius:50%}
-.board-postcard span{display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u,1)*2px)}
+.board-postcard{position:absolute;z-index:3;display:grid;place-items:center;margin:0;padding:0;color:var(--ink);background:var(--paper-lift,#f7f1e6);border:calc(var(--u,1)*1px) solid var(--ink);border-radius:calc(var(--u,1)*3px);box-shadow:0 calc(var(--u,1)*3px) 0 #17307f26;font:400 calc(var(--u,1)*11px)/1.25 var(--hand);transform-origin:50% 7%;animation:postcard-swing 3.2s ease-in-out infinite;cursor:pointer;will-change:transform}
+.board-postcard>i{position:absolute;top:calc(var(--u,1)*2px);left:50%;width:calc(var(--u,1)*5px);height:calc(var(--u,1)*5px);margin-left:calc(var(--u,1)*-2.5px);background:var(--ink);border-radius:50%}
+.board-postcard span{display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u,1)*1px);filter:url(#iu-pen)}
 .board-postcard b{font-weight:400}
-.board-postcard b+b{margin-left:.5em;font-size:1.2em}
-.board-postcard:hover{background:#fffaf0;box-shadow:0 0 0 calc(var(--u,1)*2px) #fff8e8,0 0 0 calc(var(--u,1)*3.5px) #0b2b6c66}
-.board-postcard:focus-visible{outline:2px solid #0b2b6c;outline-offset:4px}
+.board-postcard b+b{margin-left:.5em;font-size:1.15em}
+.board-postcard:hover{background:#fffaf2;box-shadow:0 0 0 calc(var(--u,1)*2px) #fffaf2,0 0 0 calc(var(--u,1)*3.5px) #17307f66}
+.board-postcard:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
 @keyframes postcard-swing{
  0%{transform:rotate(0deg)}
  8%{transform:rotate(13deg)}
@@ -20,77 +23,79 @@
  56%{transform:rotate(2.5deg)}
  66%,100%{transform:rotate(0deg)}
 }
-.board-postcard-bubble{position:absolute;z-index:4;padding:.35em .75em;color:#f8efdc;background:#0b2b6c;border-radius:1em;box-shadow:2px 3px #0b2b6c33;font:600 max(13px,calc(var(--u,1)*11px))/1.2 var(--sans);white-space:nowrap;transform:translate(calc(-100% - 14px),-50%);animation:postcard-bubble 1.6s ease-in-out infinite;cursor:pointer}
-.board-postcard-bubble::after{content:'';position:absolute;top:50%;right:-7px;margin-top:-6px;border:6px solid transparent;border-right:0;border-left:8px solid #0b2b6c}
+.board-postcard-bubble{position:absolute;z-index:4;padding:.45em .95em;color:var(--brand-cream,#f6dea9);background:var(--ink);border-radius:999px;box-shadow:0 4px 0 #0c1d55;font:500 max(12px,calc(var(--u,1)*10px))/1.2 var(--mono,var(--sans));letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;transform:translate(calc(-100% - 14px),-50%);animation:postcard-bubble 1.6s ease-in-out infinite;cursor:pointer}
+.board-postcard-bubble::after{content:'';position:absolute;top:50%;right:-7px;margin-top:-6px;border:6px solid transparent;border-right:0;border-left:8px solid var(--ink)}
 @keyframes postcard-bubble{0%,100%{transform:translate(calc(-100% - 14px),-50%)}50%{transform:translate(calc(-100% - 8px),-50%)}}
+html[lang='ja'] .board-postcard-bubble,html[lang='zh'] .board-postcard-bubble{letter-spacing:.04em;text-transform:none}
 @media(prefers-reduced-motion:reduce){
  .board-postcard{animation:none;transform:rotate(-4deg)}
  .board-postcard-bubble{animation:none}
 }
 .postcard-pick{display:inline-flex;align-items:center;gap:6px;min-height:44px}
-.postcard-pinned{display:inline-block;font-size:12px;color:#414d6d}
+.postcard-pinned{display:inline-block;font:500 13px/1.4 var(--sans);color:var(--ink-soft,#45507f)}
 
-/* 2. The hide-and-seek pop-up. The room scrolls sideways on phones, so hidden things stay big enough to tap. */
-.postcard-game{display:flex;flex-direction:column;gap:12px;color:var(--ink);font:400 14px/1.5 var(--sans)}
-.seek-head .micro{margin:0 0 6px!important}
+/* 2. The hide-and-seek pop-up. */
+.postcard-game{display:flex;flex-direction:column;gap:14px;color:var(--ink);font:400 16px/1.5 var(--sans)}
+.seek-head .micro{margin:0 0 8px!important}
 .seek-rooms{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
-.seek-rooms li{display:flex;align-items:center;gap:6px;padding:3px 10px 3px 4px;border:1px solid #0b2b6c30;border-radius:999px;font-size:12px;color:var(--hd-muted)}
-.seek-rooms li span{display:grid;place-items:center;width:20px;height:20px;border:1px solid currentColor;border-radius:50%;font-size:11px}
-.seek-rooms li.current{color:var(--ink);background:#fffaf0;border-color:var(--ink)}
+.seek-rooms li{display:flex;align-items:center;gap:7px;min-height:36px;padding:4px 14px 4px 5px;font:500 14px/1.2 var(--sans);color:var(--ink-soft,#45507f);border:1.5px solid var(--rule,#17307f40);border-radius:999px}
+.seek-rooms li span{display:grid;place-items:center;width:24px;height:24px;border:1.5px solid currentColor;border-radius:50%;font-size:12px}
+.seek-rooms li.current{color:var(--brand-cream,#f6dea9);background:var(--ink);border-color:var(--ink)}
 .seek-rooms li.done{color:var(--ink)}
-.seek-rooms li.done span{color:#f8efdc;background:var(--ink);border-color:var(--ink)}
-.seek-host{display:grid;grid-template-columns:44px minmax(0,1fr);gap:10px;align-items:center}
-.seek-host-art .pixel-host-portrait{width:44px;height:47px}
-.seek-speaker{margin:0 0 2px;font:600 10px/1.4 var(--sans);letter-spacing:1px;color:var(--hd-muted)}
-.seek-speaker span{font-weight:400;font-style:italic;letter-spacing:0}
-.seek-host h3{min-height:1.25em;margin:0;font:400 22px/1.25 var(--hand);color:var(--ink)}
+.seek-rooms li.done span{color:var(--brand-cream,#f6dea9);background:var(--ink);border-color:var(--ink)}
+.seek-host{display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;align-items:center}
+.seek-host-art .pixel-host-portrait{width:48px;height:51px}
+.seek-speaker{margin:0 0 4px;font:500 11px/1.4 var(--mono,var(--sans));letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft,#45507f)}
+.seek-speaker span{letter-spacing:.04em;text-transform:none;font-style:italic;font-weight:400}
+.seek-host h3{min-height:1.5em;margin:0;font:400 21px/1.55 var(--hand);color:var(--ink);filter:url(#iu-pen)}
 .seek-host h3:focus{outline:none}
 .seek-host h3:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.seek-scroll{overflow-x:auto;background:#efe3c8;border:1px solid #0b2b6c55;border-radius:6px}
-.seek-stage{position:relative;width:min(100%,calc((100dvh - 340px)*1.6));min-width:560px;margin:0 auto;aspect-ratio:640/400}
+.seek-scroll{overflow-x:auto;background:var(--paper,#f3eadb);border:1.5px solid var(--rule,#17307f40);border-radius:var(--r-lg,22px);box-shadow:0 4px 0 #17307f14}
+.seek-stage{position:relative;width:min(100%,calc((100dvh - 360px)*1.6));min-width:560px;margin:0 auto;aspect-ratio:640/400}
 .seek-stage svg{display:block;width:100%;height:100%}
 .seek-spot{position:absolute;margin:0;padding:0;background:transparent;border:0;border-radius:50%;cursor:pointer}
-.seek-spot:hover{background:radial-gradient(closest-side,#ffffff66,transparent)}
+.seek-spot:hover{background:radial-gradient(closest-side,#ffffff70,transparent)}
 .seek-spot:focus-visible{outline:2px solid var(--ink);outline-offset:2px;background:#ffffff40}
 .seek-spot.found{cursor:default}
 .seek-spot.hint{animation:seek-hint 1.2s ease-in-out infinite}
-@keyframes seek-hint{0%,100%{box-shadow:0 0 0 0 #f3c94d00}50%{box-shadow:0 0 0 6px #f3c94dcc,inset 0 0 18px #f3c94d}}
+@keyframes seek-hint{0%,100%{box-shadow:0 0 0 0 #f6dea900}50%{box-shadow:0 0 0 7px #f6dea9,inset 0 0 18px #f3c94d}}
 .seek-ring{stroke-dasharray:1;stroke-dashoffset:1;animation:seek-ring .6s ease-out forwards}
 @keyframes seek-ring{to{stroke-dashoffset:0}}
-.seek-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px}
+.seek-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 16px}
 .seek-tray{flex:1 1 360px;min-width:0}
-.seek-tray-label{display:block;margin:0 0 6px;font-size:12px;color:var(--hd-muted)}
+.seek-tray-label{display:block;margin:0 0 8px;font:500 11px/1.4 var(--mono,var(--sans));letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft,#45507f)}
 .seek-tray-label b{font-weight:600;color:var(--ink)}
 .seek-tray ul{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
-.seek-tray li{display:flex;align-items:center;gap:4px;padding:3px 8px 3px 3px;font-size:12px;color:var(--hd-muted);background:#fffaf0;border:1px dashed #0b2b6c55;border-radius:8px}
+.seek-tray li{display:flex;align-items:center;gap:4px;padding:3px 12px 3px 4px;font:500 14px/1.2 var(--sans);color:var(--ink-soft,#45507f);background:var(--paper-lift,#f7f1e6);border:1.5px dashed var(--rule,#17307f40);border-radius:999px}
 .seek-tray li svg{width:30px;height:32px;opacity:.35;filter:grayscale(1)}
-.seek-tray li.found{color:var(--ink);border-style:solid;border-color:var(--ink)}
-.seek-tray li.found svg{opacity:1;filter:none;animation:seek-pop .4s ease-out}
+.seek-tray li.found{color:var(--ink);background:#17307f0d;border-style:solid;border-color:var(--ink)}
+.seek-tray li.found svg{opacity:1;filter:none;animation:seek-pop .45s var(--spring,ease-out)}
 @keyframes seek-pop{0%{transform:scale(.4)}70%{transform:scale(1.2)}100%{transform:scale(1)}}
 .seek-actions{display:flex;gap:10px}
-.postcard-game .primary,.postcard-game .outlined-button{min-height:44px;padding:8px 18px}
-.seek-postcard{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;align-items:start}
-.seek-card{min-height:150px;padding:16px 18px;background:#fffaf0;border:1px solid var(--ink);box-shadow:3px 4px #0b2b6c22}
-.seek-card.front{display:flex;flex-direction:column;font:400 30px/1.05 var(--hand);transform:rotate(-1.5deg)}
-.seek-card.front b{font-weight:400}
-.seek-card.front b+b{margin-left:.6em;font-size:1.2em}
+.postcard-game .primary,.postcard-game .outlined-button{min-height:44px;padding:10px 22px}
+.seek-postcard{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;align-items:start}
+.seek-card{min-height:160px;padding:18px 20px;background:var(--paper-lift,#f7f1e6);border:1.5px solid var(--ink);border-radius:var(--r-md,16px);box-shadow:0 4px 0 #17307f14,0 14px 30px -18px #17307f40;animation:iu-pop .45s var(--spring,ease-out) both}
+.seek-card.front{display:flex;flex-direction:column;font:400 26px/1.4 var(--hand);transform:rotate(-1.5deg)}
+.seek-card.front>b{font-weight:400;filter:url(#iu-pen)}
+.seek-card.front>b+b{margin-left:.6em;font-size:1.15em}
 .seek-stamps{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-.seek-stamps span{padding:4px 9px;border:1.5px solid var(--ink);border-radius:50%/40%;font:600 11px/1.2 var(--sans);transform:rotate(-6deg)}
+.seek-stamps span{padding:5px 11px;border:1.5px solid var(--ink);border-radius:999px;font:500 11px/1.2 var(--mono,var(--sans));letter-spacing:.12em;text-transform:uppercase;transform:rotate(-5deg)}
 .seek-card.back{transform:rotate(1deg)}
-.seek-card.back p{margin:6px 0 0;font:400 15px/1.55 var(--ui-serif)}
-.seek-card.back .seek-source{font:400 12px/1.5 var(--sans)}
+.seek-card.back p{margin:6px 0 0;font:400 17px/1.55 var(--sans);color:var(--ink-soft,#45507f)}
+.seek-card.back .seek-source{font:400 14px/1.5 var(--sans)}
 .seek-source a{color:var(--ink)}
 .seek-postcard .seek-actions{grid-column:1/-1}
 /* Phones: three zoom levels. "mid" (the default) shows most of the room; "close" makes every hidden spot 46px+. */
 .seek-zoom-row{display:none}
 @media(max-width:760px){
  .seek-host h3{font-size:18px}
+ .seek-scroll{border-radius:var(--r-md,16px)}
  .seek-zoom-fit .seek-stage{width:100%;min-width:0}
  .seek-zoom-mid .seek-stage{width:480px;min-width:480px}
  .seek-zoom-close .seek-stage{width:680px;min-width:680px}
- .seek-zoom-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:-4px}
- .seek-zoom-row span{flex:1;text-align:center;font-size:12px;color:var(--hd-muted)}
- .seek-zoom-row .outlined-button{flex:0 0 44px;width:44px;min-width:44px;max-width:44px;height:44px;min-height:44px;padding:0;font:600 20px/1 var(--sans)}
+ .seek-zoom-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:-2px}
+ .seek-zoom-row span{flex:1;text-align:center;font:400 14px/1.3 var(--sans);color:var(--ink-soft,#45507f)}
+ .seek-zoom-row .outlined-button{flex:0 0 44px;width:44px;min-width:44px;max-width:44px;height:44px;min-height:44px;padding:0!important;font-size:20px!important;line-height:1!important}
  .seek-zoom-row .outlined-button:disabled{opacity:.4}
 }
-@media(prefers-reduced-motion:reduce){.seek-spot.hint,.seek-ring,.seek-tray li.found svg{animation:none}.seek-ring{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.seek-spot.hint,.seek-ring,.seek-tray li.found svg,.seek-card{animation:none}.seek-ring{stroke-dashoffset:0}}

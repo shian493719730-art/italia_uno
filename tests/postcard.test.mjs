@@ -4,7 +4,7 @@ import { SEEK_ROOMS, POSTCARD_ROOM, TOTAL_FINDS, SEEK_ACTIONS, initialPostcard, 
 import { initial, reduce } from '../lib/game-state.mjs';
 import { makeReceipt } from '../lib/receipt.mjs';
 import { POSTCARD_COPY } from '../lib/postcard-copy.mjs';
-import { ITALIAN } from '../lib/locales.mjs';
+import { ITALIAN, JAPANESE } from '../lib/locales.mjs';
 
 const AT = '2026-11-08T18:00:00.000Z';
 const eating = () => [{ type: 'YES' }, { type: 'ORDER' }, { type: 'ADD', id: 'italia' }, { type: 'DONE' }].reduce(r, initialCustomer());
@@ -80,7 +80,7 @@ const outside = reduce(visit, { type: 'OUTSIDE' });
 assert.equal(reduce(outside, { type: 'CUSTOMER', action: { type: 'SEEK_FIND', id: 'moka' } }), outside);
 
 // Text: every object has a name and a line in all three languages, and every English string has Italian.
-for (const lang of ['en', 'it', 'zh']) {
+for (const lang of ['en', 'it', 'zh', 'ja']) {
   const t = POSTCARD_COPY[lang];
   for (const room of SEEK_ROOMS) {
     for (const id of room.items) { assert(t.items[id], `${lang} name ${id}`); assert(t.reactions[id], `${lang} reaction ${id}`); }
@@ -91,6 +91,7 @@ for (const lang of ['en', 'it', 'zh']) {
 const strings = new Set(); const walk = v => typeof v === 'string' ? strings.add(v) : Array.isArray(v) ? v.forEach(walk) : v && typeof v === 'object' ? Object.values(v).forEach(walk) : 0;
 walk(POSTCARD_COPY.en);
 assert.deepEqual([...strings].filter(text => !Object.hasOwn(ITALIAN, text)), [], 'Italian entries missing');
+assert.deepEqual([...strings, 'Postcard hide-and-seek'].filter(text => !Object.hasOwn(JAPANESE, text)), [], 'Japanese entries missing');
 assert.equal(JSON.stringify(Object.keys(POSTCARD_COPY.zh).sort()), JSON.stringify(Object.keys(POSTCARD_COPY.en).sort()), 'Chinese has the same keys as English');
 
-console.log(`Postcard hide-and-seek passed: optional (5-second checkout unchanged), ${SEEK_ROOMS.length} rooms × 5 finds in order, decoys and other rooms' items ignored, pin at the end, frozen after checkout, receipt row, saves and version-1 saves, reset, and ${strings.size} Italian strings.`);
+console.log(`Postcard hide-and-seek passed: optional (5-second checkout unchanged), ${SEEK_ROOMS.length} rooms × 5 finds in order, decoys and other rooms' items ignored, pin at the end, frozen after checkout, receipt row, saves and version-1 saves, reset, and ${strings.size} strings in Italian and Japanese.`);
