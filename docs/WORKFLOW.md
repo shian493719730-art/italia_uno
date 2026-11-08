@@ -2,6 +2,8 @@
 
 ## Human brief and decisions
 
+**Co-creator: [Zhiang Wang](https://github.com/z48gdcngbf-jpg)** — human creative direction, reference selection, interaction and art-direction feedback, and submission decisions. Project home: [z48gdcngbf-jpg/italia_uno](https://github.com/z48gdcngbf-jpg/italia_uno).
+
 The project is a Creative Track prototype for discovering a small real café through a game. The human-provided material included restaurant photographs, blackboard menus, a shopfront/interior sketch, interface wireframes, an art-direction PDF and a proposed logo. These inputs shaped the street → café → order → meal/story → receipt → real-world invitation sequence.
 
 Human feedback directed the separate interior page, full menu, owner-management side game, scene-aware cheerful Italian cinema/jazz atmosphere, visitor and owner keepsake receipts, three-language selection, detailed art, logo-consistent wide brush typography, independent phone layout, non-overlapping welcome copy, and drawn arrows instead of system emoji. These were iterative product decisions, not conclusions generated from research statistics.
@@ -10,7 +12,7 @@ Human feedback directed the separate interior page, full menu, owner-management 
 
 Codex assisted with task decomposition, original Canvas/SVG/CSS drawing code, React integration, deterministic game models, procedural Web Audio, translations, source research, regression checks, browser QA and packaging. Bounded agents assisted selected UI, localisation and art/code subtasks during development. No external game sprites or source were copied. The delivered artwork uses code, not generated raster media; the score is synthesized in the browser, not a borrowed recording.
 
-Gemini conversation links and Canva brand-book/campaign work are separate hackathon deliverables. This repository does not claim to contain or complete them. Contributor roles from the earlier Cambridge Pledge project are not silently assigned to this new project.
+The [Gemini prompt showcase](../workflows/gemini-creative-track/PROMPTS.md#prompt-showcase) cites three separate shared conversations. The [supplementary agent log](GEMINI_AGENT_LOG.md) records their later drafting and critique contribution. Canva brand-book/campaign plans remain separate deliverables; a completed export is not claimed. Contributor roles from the earlier Cambridge Pledge project are not silently assigned to this new project.
 
 ## Reusable steps
 

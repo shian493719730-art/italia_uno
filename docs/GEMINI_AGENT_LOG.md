@@ -4,6 +4,8 @@
 
 [Prompt showcase and citations](../workflows/gemini-creative-track/PROMPTS.md#prompt-showcase) · [Demo media and supplemental explanation](DEMO_MEDIA.md) · [Whole-project development walkthrough](https://share.gemini.google/6HcePfZERAVp) · [Toolkit and brand-book dialogue](https://share.gemini.google/1ol6yl0YbhvM) · [Reusable workflow](../workflows/gemini-creative-track/README.md) · [One-page brand-book copy](GEMINI_BRAND_BOOK_PAGE.md)
 
+**Co-creator: [Zhiang Wang](https://github.com/z48gdcngbf-jpg)** — human creative direction, reference selection, interaction and art-direction feedback, and submission decisions. Project home: [z48gdcngbf-jpg/italia_uno](https://github.com/z48gdcngbf-jpg/italia_uno).
+
 ## What we made together in these conversations
 
 The team supplied an existing café-game prototype, the competition brief and feedback. Gemini acted as the lead drafting and critique partner for a **source-grounded workflow reconstruction**: explaining the project, organizing the toolkit and revising the submission narrative. The visible conversations document this collaboration. They do not establish that Gemini originated or implemented the earlier game.
