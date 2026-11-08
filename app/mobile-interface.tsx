@@ -6,11 +6,12 @@ import {useEffect,useId,useRef,useState} from 'react';
 const copy={
  en:{explore:'Explore the café',places:'Five places to discover',show:'View the counter',hide:'Hide the counter',pause:'Pause visit',language:'Language'},
  it:{explore:'Esplora il caffè',places:'Cinque dettagli da scoprire',show:'Guarda il banco',hide:'Nascondi il banco',pause:'Una pausa',language:'Lingua'},
- zh:{explore:'探索店里的细节',places:'五处小发现，点开选择',show:'看看柜台',hide:'收起柜台',pause:'暂停探店',language:'语言'}
+ zh:{explore:'探索店里的细节',places:'五处小发现，点开选择',show:'看看柜台',hide:'收起柜台',pause:'暂停探店',language:'语言'},
+ ja:{explore:'カフェを探検',places:'5つの小さな発見',show:'カウンターを見る',hide:'カウンターを閉じる',pause:'ひと休み',language:'言語'}
 };
 
 export function MobileLanguageSelect({lang,onChange}){
- return <select className="mobile-language-select" aria-label={(copy[lang]||copy.en).language} value={lang} onChange={e=>onChange(e.target.value)}><option value="it" aria-label="Italiano">IT</option><option value="en" aria-label="English">EN</option><option value="zh" aria-label="简体中文">中文</option></select>;
+ return <select className="mobile-language-select" aria-label={(copy[lang]||copy.en).language} value={lang} onChange={e=>onChange(e.target.value)}><option value="it" aria-label="Italiano">IT</option><option value="en" aria-label="English">EN</option><option value="zh" aria-label="简体中文">中文</option><option value="ja" aria-label="日本語">日本語</option></select>;
 }
 
 export function useMobilePageEntry(page){
