@@ -7,7 +7,7 @@ import { MENU_ITEMS, MENU_CATEGORIES, MENU_COUNT } from '../lib/menu-data.mjs';
 import { virtualPrice, pounds } from '../lib/customer-state.mjs';
 type Recipe = 'italia' | 'campagnolo' | 'barese';
 type Props = {
-    lang?: 'it' | 'en' | 'zh';
+    lang?: 'it' | 'en' | 'zh' | 'ja';
     onChoose?: (recipe: Recipe) => void;
     onAdd?: (id: string) => void;
     quantities?: Record<string, number>;
@@ -20,10 +20,12 @@ type MenuItem = {
     it: string;
     en: string;
     zh: string;
+    ja: string;
     description: {
         it: string;
         en: string;
         zh: string;
+        ja: string;
     };
     certainty: string;
     gameRecipe?: Recipe;
@@ -36,7 +38,7 @@ export function MenuSprite({ category = 'panini' }: {
 export default function MenuBook({ lang = 'en', onChoose, onAdd, quantities = {}, addReason }: Props) {
     const c = copy[lang], uid = useId();
     const [category, setCategory] = useState('all'), [query, setQuery] = useState('');
-    const filtered = useMemo(() => { const needle = query.trim().toLocaleLowerCase(); return items.filter(item => (category === 'all' || item.category === category) && (!needle || [item.name, item.it, item.en, item.zh, item.description.it, item.description.en, item.description.zh].join(' ').toLocaleLowerCase().includes(needle))); }, [category, query]);
+    const filtered = useMemo(() => { const needle = query.trim().toLocaleLowerCase(); return items.filter(item => (category === 'all' || item.category === category) && (!needle || [item.name, item.it, item.en, item.zh, item.ja, item.description.it, item.description.en, item.description.zh, item.description.ja].join(' ').toLocaleLowerCase().includes(needle))); }, [category, query]);
     return <section className="menu-book" aria-labelledby={uid + '-title'}>
   <header className="menu-book-header"><span className="menu-book-eyebrow">{c.eyebrow}</span><h3 id={uid + '-title'}>{c.title}</h3><p>{c.intro}</p><div className="menu-book-reference"><span aria-hidden="true">▧</span><div><strong>{c.photo}</strong><p>{onAdd ? (ui(lang, 'Photo-menu names, virtual prices: amounts below are invented for play, not current café prices. No order is sent and nothing is charged.', '照片菜名，虚拟价格：下方金额只为游戏设置，并非店家当前报价。不会下单或扣费。')) : c.note}</p></div></div></header>
   <div className="menu-book-tools"><label htmlFor={uid + '-search'}>{c.search}</label><div className="menu-book-search"><span aria-hidden="true">⌕</span><input type="search" id={uid + '-search'} value={query} placeholder={c.placeholder} onChange={e => setQuery(e.target.value)} autoComplete="off"/></div><nav className="menu-book-tabs" aria-label={ui(lang, 'Menu categories', '菜单分类')}><button type="button" className={category === 'all' ? 'active' : ''} aria-pressed={category === 'all'} onClick={() => setCategory('all')}>{c.all}<span>{MENU_COUNT}</span></button>{MENU_CATEGORIES.map(cat => <button type="button" key={cat.id} className={category === cat.id ? 'active' : ''} aria-pressed={category === cat.id} onClick={() => setCategory(cat.id)}>{cat[lang]}<span>{items.filter(x => x.category === cat.id).length}</span></button>)}</nav></div>
