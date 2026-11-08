@@ -4,6 +4,8 @@ A handcrafted café exploration and restaurant-management game, released for any
 
 [Play the live game](https://italia-uno-first-visit.shian493719370.chatgpt.site/) · [中文说明](#中文快速开始) · [MIT license](LICENSE) · [Production workflow](docs/WORKFLOW.md)
 
+**Gemini collaboration package:** [real shared sessions and agent log](docs/GEMINI_AGENT_LOG.md) · [reusable workflow and prompt pack](workflows/gemini-creative-track/README.md) · [one-page brand-book plan](docs/GEMINI_BRAND_BOOK_PAGE.md). The linked sessions document retrospective drafting and review; implementation history remains separately credited.
+
 ![Desktop welcome scene](docs/images/desktop.png)
 
 ## Run it
@@ -11,8 +13,8 @@ A handcrafted café exploration and restaurant-management game, released for any
 Use **Node.js 22.13 or newer** and npm. No account, API key, database, paid service or Sites plugin is required.
 
 ```sh
-git clone https://github.com/shian493719730-art/italia-uno-a-little-local-adventure.git
-cd italia-uno-a-little-local-adventure
+git clone https://github.com/z48gdcngbf-jpg/italia_uno.git
+cd italia_uno
 npm ci
 npm run dev
 ```

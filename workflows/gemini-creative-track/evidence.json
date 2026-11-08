@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-11-08",
+  "upstream_repository": "https://github.com/z48gdcngbf-jpg/italia_uno",
+  "source_commit": "b36d7c76dbcc2ebb901f605e616406210f37b9a0",
+  "conversations": [
+    {
+      "id": "toolkit",
+      "title": "Italia Uno Brand-Book Summary",
+      "submitted_url": "https://share.gemini.google/1ol6yl0YbhvM",
+      "canonical_url": "https://gemini.google.com/share/13c18ab2d055",
+      "reviewed": true,
+      "observed_contribution": "Drafting, scope critique, toolchain mapping and feedback-driven revision.",
+      "does_not_establish": "Historical authorship of the game or execution of external creative tools."
+    },
+    {
+      "id": "walkthrough",
+      "title": "Italia Uno Development Walkthrough",
+      "submitted_url": "https://share.gemini.google/6HcePfZERAVp",
+      "canonical_url": "https://gemini.google.com/share/f2c0a00dde88",
+      "reviewed": true,
+      "observed_contribution": "A source-grounded hypothetical development walkthrough and a factual correction.",
+      "does_not_establish": "Gemini implementation, test execution or deployment of the historical code."
+    }
+  ],
+  "product_pivot": {
+    "commit": "f7b1d8130595feab8bb9b3ded1a13d11d90f8925",
+    "url": "https://github.com/z48gdcngbf-jpg/italia_uno/commit/f7b1d8130595feab8bb9b3ded1a13d11d90f8925",
+    "status": "repository_evidence_separate_from_gemini_dialogue"
+  },
+  "source_files": [
+    "app/game.tsx",
+    "lib/customer-state.mjs",
+    "lib/receipt.mjs",
+    "lib/menu-data.mjs",
+    "lib/handdrawn-scenes.mjs",
+    "lib/drawing-kit.mjs",
+    "lib/chef-art.mjs",
+    "app/postcard-game.tsx",
+    "lib/postcard-game.mjs",
+    "app/service-shift.tsx",
+    "lib/service-state.mjs",
+    "lib/music-score.mjs",
+    "lib/cafe-music.mjs",
+    "lib/locales.mjs",
+    "lib/it/core.mjs",
+    "lib/ja/core.mjs",
+    "app/mobile.css",
+    "app/welcome.css",
+    "app/bistro.css",
+    "docs/STORY_JOURNEY_SPEC.md",
+    ".github/workflows/deploy-pages.yml",
+    "public/handdrawn/italia-uno-logo.jpeg"
+  ],
+  "source_tokens": [
+    {
+      "path": "app/bistro.css",
+      "value": "--ink:#17307f"
+    },
+    {
+      "path": "app/bistro.css",
+      "value": "--brand-cream:#f6dea9"
+    },
+    {
+      "path": "app/bistro.css",
+      "value": "--paper:#f3eadb"
+    },
+    {
+      "path": "lib/postcard-game.mjs",
+      "value": "export function reduceSeek(c, a)"
+    },
+    {
+      "path": "lib/postcard-game.mjs",
+      "value": "if (seekReason(c, a)) return c;"
+    }
+  ],
+  "proposed_tools": [
+    "Canva",
+    "Nano Banana",
+    "Gems",
+    "Canva Brand Kit",
+    "Canva Magic Studio"
+  ],
+  "checks": {
+    "shared_pages": "Opened and read in a browser",
+    "source_references": "Local paths and selected tokens checked by verify-evidence.mjs",
+    "game_tests": "Not rerun for this documentation-only change",
+    "production_build": "Not rerun for this documentation-only change",
+    "canva_exports": "Not reviewed"
+  },
+  "package_files": [
+    "docs/GEMINI_AGENT_LOG.md",
+    "docs/GEMINI_BRAND_BOOK_PAGE.md",
+    "workflows/gemini-creative-track/README.md",
+    "workflows/gemini-creative-track/PROMPTS.md",
+    "workflows/gemini-creative-track/evidence.json",
+    "workflows/gemini-creative-track/DECISIONS.csv",
+    "workflows/gemini-creative-track/verify-evidence.mjs"
+  ]
+}
