@@ -1,0 +1,14 @@
+<!-- EmailJS body template. To: {{customer_email}}. Set shop Bcc as a fixed
+     address in the provider dashboard. All customer values stay escaped. -->
+<div style="background:#f3eadb;padding:24px 12px;color:#17307f;font-family:Georgia,serif">
+  <div style="max-width:540px;margin:auto;background:#fffaf0;border:1px solid #17307f;padding:24px">
+    <h1 style="font-size:28px;margin:0 0 8px">Italia Uno</h1>
+    <p style="font-size:13px;margin:0 0 20px">TEAM SNAPPER · VIRTUAL CAFÉ KEEPSAKE</p>
+    <p style="border-top:1px dashed #17307f;padding-top:16px">{{order_id}} · {{order_date}}</p>
+    <pre style="white-space:pre-wrap;overflow-wrap:anywhere;font:16px/1.6 Georgia,serif;color:#17307f">{{receipt_text}}</pre>
+    <p style="border-top:1px dashed #17307f;padding-top:16px;font-size:13px">
+      VIRTUAL ORDER · NO REAL PURCHASE · ACTUALLY CHARGED £0.00
+    </p>
+    <p style="font-size:12px">Requested by {{customer_email}}. A copy goes to the project mailbox.</p>
+  </div>
+</div>
