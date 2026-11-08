@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "workflow": "email-setup",
+  "provider": null,
+  "state": "not_started",
+  "owner_authorised_signup": false,
+  "new_mailbox_address_verified": false,
+  "mailbox_access_verified": false,
+  "owner_confirmed_control": false,
+  "updated_on": null
+}

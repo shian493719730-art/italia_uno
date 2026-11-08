@@ -2,7 +2,11 @@
 
 A handcrafted café exploration and restaurant-management game, released for anyone to run, study and remix. Indigo ink, warm paper, an animated fictional host and an original scene-aware Web Audio score.
 
-[Play the live game](https://z48gdcngbf-jpg.github.io/italia_uno/) · [中文说明](#中文快速开始) · [MIT license](LICENSE) · [Production workflow](docs/WORKFLOW.md)
+**Co-creator: [Zhiang Wang](https://github.com/z48gdcngbf-jpg)** — human creative direction, reference selection, interaction and art-direction feedback, and submission decisions. Project home: [z48gdcngbf-jpg/italia_uno](https://github.com/z48gdcngbf-jpg/italia_uno).
+
+[Play the live game](https://z48gdcngbf-jpg.github.io/italia_uno/) · [中文说明](#中文快速开始) · [MIT license](LICENSE) · [Production workflow](docs/WORKFLOW.md) · [Brand and art-direction prompt](docs/ART_DIRECTION_PROMPT.md)
+
+**Gemini collaboration package:** [real shared sessions and agent log](docs/GEMINI_AGENT_LOG.md) · [reusable workflow and prompt pack](workflows/gemini-creative-track/README.md) · [one-page brand-book plan](docs/GEMINI_BRAND_BOOK_PAGE.md) · [demo media index](docs/DEMO_MEDIA.md). The linked sessions document retrospective drafting and review; implementation history remains separately credited.
 
 ![Desktop welcome scene](docs/images/desktop.png)
 
@@ -11,8 +15,8 @@ A handcrafted café exploration and restaurant-management game, released for any
 Use **Node.js 22.13 or newer** and npm. No account, API key, database, paid service or Sites plugin is required.
 
 ```sh
-git clone https://github.com/shian493719730-art/italia-uno-a-little-local-adventure.git
-cd italia-uno-a-little-local-adventure
+git clone https://github.com/z48gdcngbf-jpg/italia_uno.git
+cd italia_uno
 npm ci
 npm run dev
 ```
@@ -32,6 +36,10 @@ npm run typecheck
 ```
 
 `"private": true` in package.json prevents accidental npm registry publication; this repository and its MIT source are public.
+
+## Optional project email setup
+
+If a project owner needs a new mailbox before setting up project services, use the [assisted email-creation workflow](workflows/email-setup/README.md) and [reusable prompt](workflows/email-setup/PROMPT.md). It covers official Gmail/Outlook signup, owner-controlled private steps and a mailbox-access check. This is a documented preparation workflow; no email account is created automatically.
 
 ## Brand promotion workflow
 

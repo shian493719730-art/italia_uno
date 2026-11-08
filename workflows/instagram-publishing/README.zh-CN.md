@@ -1,5 +1,7 @@
 # Instagram Publishing Agent
 
+如需先创建项目邮箱，可选用[协助创建邮箱流程](../email-setup/README.md)。邮箱注册、Instagram 注册和发布授权分别处理；此模块不会自动创建账号或启动发布。
+
 [English](README.md) · [简体中文](README.zh-CN.md)
 
 **以 Loop Engineering 为核心的 Instagram 发布流程。**
