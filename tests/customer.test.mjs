@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import {MENU_ITEMS} from '../lib/menu-data.mjs';
-import {initialCustomer,reduceCustomer as r,customerReason,normaliseCustomer,orderTotal,cartCount,virtualPrice,EATING_SECONDS} from '../lib/customer-state.mjs';
+import {initialCustomer,reduceCustomer as r,customerReason,normaliseCustomer,orderTotal,cartCount,virtualPrice} from '../lib/customer-state.mjs';
+import {playStory} from './story-play.mjs';
 import {initial,reduce} from '../lib/game-state.mjs';
 import {hydrateVisit} from '../lib/visit-memory.mjs';
 import {makeReceipt,receiptSVG} from '../lib/receipt.mjs';
@@ -16,10 +17,10 @@ c=r(c,{type:'REMOVE',id:'italia'});assert.equal(c.cart.italia,1);c=r(c,{type:'AD
 let capped=c;for(let i=0;i<50;i++)capped=r(capped,{type:'ADD',id:'italia'});assert.equal(capped.cart.italia,9);assert.equal(customerReason(capped,{type:'ADD',id:'italia'}),'item-limit');
 for(const id of ['barese','campagnolo','espresso'])for(let i=0;i<10;i++)capped=r(capped,{type:'ADD',id});assert.equal(cartCount(capped),20);assert.equal(customerReason(capped,{type:'ADD',id:'gelati'}),'cart-full');
 c=r(c,{type:'DONE'});assert.equal(c.phase,'eating');assert.equal(r(c,{type:'DONE'}),c);assert.equal(r(c,{type:'ADD',id:'barese'}),c);assert.equal(r(c,{type:'REMOVE',id:'italia'}),c);
-assert.equal(r(c,{type:'CHECKOUT',at:'2026-11-07T18:00:00.000Z'}),c);c=r(c,{type:'TICK',seconds:4});assert.equal(c.eatenSeconds,4);assert.equal(customerReason(c,{type:'CHECKOUT'}),'still-eating');
-assert.equal(r(c,{type:'TICK',seconds:-5}),c);c=r(c,{type:'STORY'});assert(c.storyRead);c=r(c,{type:'TICK',seconds:1});assert.equal(c.eatenSeconds,EATING_SECONDS);
+assert.equal(r(c,{type:'CHECKOUT',at:'2026-11-07T18:00:00.000Z'}),c);assert.equal(customerReason(c,{type:'CHECKOUT'}),'still-eating');
+c=playStory(c,r);assert(c.storyRead);assert.equal(c.bites,4);
 assert.equal(r(c,{type:'CHECKOUT',at:'bad date'}),c);c=r(c,{type:'CHECKOUT',at:'2026-11-07T18:00:00.000Z'});assert.equal(c.phase,'checkout');
-const same=c;c=r(c,{type:'CHECKOUT',at:'2026-11-08T18:00:00.000Z'});assert.equal(c,same);assert.equal(r(c,{type:'TICK',seconds:1}),c);
+const same=c;c=r(c,{type:'CHECKOUT',at:'2026-11-08T18:00:00.000Z'});assert.equal(c,same);assert.equal(r(c,{type:'STORY_SKIP'}),c);
 assert.deepEqual(normaliseCustomer(JSON.parse(JSON.stringify(c))),c);
 const receipt=makeReceipt({visit:{...initial(),customer:c,memory:{name:'111',seconds:60}}});
 assert.equal(receipt.bill.total,'£11.20');assert.equal(receipt.bill.lines.length,2);assert.equal(receipt.bill.lines[0].qty,2);assert.equal(receipt.greeting,'Ciao, 111!');assert(receipt.rows.some(([k])=>k==='Read the café’s origin story'));
@@ -31,4 +32,4 @@ assert.deepEqual(r(c,{type:'RESET'}),initialCustomer());
 const legacy=initial();delete legacy.customer;assert.deepEqual(hydrateVisit(legacy).customer,initialCustomer());
 assert.equal(normaliseCustomer({version:1,phase:'checkout',cart:{italia:1},eatenSeconds:0}).phase,'eating');assert.equal(normaliseCustomer({version:1,phase:'complete',cart:{},checkoutAt:'2026-11-07'}).phase,'explore');
 let visit=reduce(initial(),{type:'ENTER'});visit=reduce(visit,{type:'CUSTOMER',action:{type:'YES'}});assert.equal(visit.customer.phase,'ready');assert.deepEqual(reduce(visit,{type:'RESET'}).customer,initialCustomer());
-console.log(`Customer journey passed: all ${MENU_ITEMS.length} menu entries, strict phase order, empty/capped carts, frozen meal, five visible seconds, one checkout, exact receipt, map link, legacy saves and reset.`);
+console.log(`Customer journey passed: all ${MENU_ITEMS.length} menu entries, strict phase order, empty/capped carts, frozen meal, story-gated checkout, one checkout, exact receipt, map link, legacy saves and reset.`);
