@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "mode": "plan",
+  "project": {
+    "name": "",
+    "purpose": "",
+    "audience": "",
+    "existing_source": ""
+  },
+  "game": {
+    "genre": "",
+    "core_loop": "",
+    "goal": "",
+    "end_conditions": "",
+    "controls": [],
+    "session_minutes": null
+  },
+  "art": {
+    "direction": "",
+    "palette": [],
+    "references": [],
+    "sound": ""
+  },
+  "delivery": {
+    "format": "single-html",
+    "languages": [
+      "en"
+    ],
+    "devices": [
+      "desktop",
+      "phone"
+    ],
+    "offline": true,
+    "engine": ""
+  },
+  "constraints": [],
+  "optional_modules": {
+    "mailbox_setup": false,
+    "email_results": false,
+    "social_publishing": false
+  }
+}

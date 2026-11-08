@@ -118,7 +118,22 @@
     "workflows/order-email/config.example.json",
     "workflows/order-email/.gitignore",
     "workflows/order-email/templates/receipt.html",
-    "workflows/order-email/demo.mjs"
+    "workflows/order-email/demo.mjs",
+    "workflows/README.md",
+    "workflows/custom-game-builder/BRIEF.template.json",
+    "workflows/custom-game-builder/INTAKE.md",
+    "workflows/custom-game-builder/LICENSE",
+    "workflows/custom-game-builder/PROMPT.md",
+    "workflows/custom-game-builder/README.md",
+    "workflows/custom-game-builder/SKILL.md",
+    "workflows/custom-game-builder/agents/openai.yaml",
+    "workflows/custom-game-builder/examples/orbit-parcel.json",
+    "workflows/custom-game-builder/references/art-direction.md",
+    "workflows/custom-game-builder/references/optional-integrations.md",
+    "workflows/custom-game-builder/references/production.md",
+    "workflows/custom-game-builder/scripts/prepare-project.mjs",
+    "workflows/custom-game-builder/VALIDATION.json",
+    "workflows/custom-game-builder/tests/prepare-project.test.mjs"
   ],
   "presentation": {
     "format": "three independent prompt summaries with inline citations",
@@ -143,5 +158,11 @@
     "path": "workflows/order-email/README.md",
     "customer_and_shop_copies": true,
     "source_reviewed_on": "2026-11-08"
+  },
+  "custom_game_builder": {
+    "status": "new portable workflow, skill and handoff-preparation helper; no new game or AI service run claimed",
+    "path": "workflows/custom-game-builder/README.md",
+    "independent_of_cafe_game": true,
+    "default_optional_modules": "off"
   }
 }
