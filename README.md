@@ -37,6 +37,10 @@ npm run typecheck
 
 `"private": true` in package.json prevents accidental npm registry publication; this repository and its MIT source are public.
 
+## Optional project email setup
+
+If a project owner needs a new mailbox before setting up project services, use the [assisted email-creation workflow](workflows/email-setup/README.md) and [reusable prompt](workflows/email-setup/PROMPT.md). It covers official Gmail/Outlook signup, owner-controlled private steps and a mailbox-access check. This is a documented preparation workflow; no email account is created automatically.
+
 ## Brand promotion workflow
 
 This repository also includes a local-first Instagram publishing workflow in [`workflows/instagram-publishing/`](workflows/instagram-publishing/). It turns reviewed, authorized brand material into a queue with a pause switch, daily limit, duplicate-prevention ledger and a required post-publication readback. It does not log in, generate posts, or automatically publish; a separately authorized browser operator performs the final action once.

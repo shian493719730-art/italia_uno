@@ -108,7 +108,11 @@
     "workflows/gemini-creative-track/verify-evidence.mjs",
     "docs/DEMO_MEDIA.md",
     "workflows/gemini-creative-track/demo-media.json",
-    "docs/ART_DIRECTION_PROMPT.md"
+    "docs/ART_DIRECTION_PROMPT.md",
+    "workflows/email-setup/README.md",
+    "workflows/email-setup/PROMPT.md",
+    "workflows/email-setup/setup-record.example.json",
+    "workflows/email-setup/.gitignore"
   ],
   "presentation": {
     "format": "three independent prompt summaries with inline citations",
@@ -122,5 +126,10 @@
     "path": "docs/ART_DIRECTION_PROMPT.md",
     "original_preserved": true,
     "derived_prompt_label": "New editorial adaptation; not historical Gemini dialogue"
+  },
+  "email_setup": {
+    "status": "new documented procedure and reusable prompt; no live account created or signup tested",
+    "path": "workflows/email-setup/README.md",
+    "sources_reviewed_on": "2026-11-08"
   }
 }

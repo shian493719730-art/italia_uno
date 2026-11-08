@@ -14,6 +14,10 @@ The team’s [brand and art-direction prompt](../../docs/ART_DIRECTION_PROMPT.md
 
 Then consult the [detailed agent log](../../docs/GEMINI_AGENT_LOG.md), [demo media index](../../docs/DEMO_MEDIA.md) and [one-page brand-book plan](../../docs/GEMINI_BRAND_BOOK_PAGE.md).
 
+## Optional preparation — project email
+
+For an owner who needs a new project mailbox, follow the [email setup procedure](../email-setup/README.md) and [agent prompt](../email-setup/PROMPT.md) before account-specific work. This is a new reusable module, not a claimed action from the three historical Gemini records. It is optional and does not enable social publishing.
+
 ## Repeatable loop
 
 | Stage | Input | Gemini's proposed role | Human decision / output |
