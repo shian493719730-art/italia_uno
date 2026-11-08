@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5ebd6">
+  <title>Italia Uno — The Story Changed | Brand Book</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5ebd6;
+      --paper-light: #fffaf0;
+      --ink: #17307f;
+      --ink-soft: #43558c;
+      --rule: #bdc3d2;
+      --rose: #c99486;
+      --shadow: rgba(23, 48, 127, .12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #e8dfd0;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+    a { color: inherit; text-underline-offset: .2em; }
+    .sheet {
+      width: min(100% - 40px, 1040px);
+      margin: 28px auto;
+      padding: clamp(28px, 6vw, 70px);
+      background:
+        radial-gradient(ellipse at 10% 7%, rgba(255,255,255,.6), transparent 38%),
+        var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 24px;
+      box-shadow: 0 18px 50px var(--shadow);
+      overflow: hidden;
+    }
+    .masthead, .folio, .eyebrow, .label, .source, .footer {
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .masthead, .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+    .masthead { padding-bottom: 18px; border-bottom: 1px solid var(--rule); }
+    .folio { color: var(--ink-soft); }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 32px;
+      padding: 44px 0 36px;
+    }
+    .eyebrow { margin: 0 0 14px; font-size: 10px; color: var(--ink-soft); }
+    h1 {
+      margin: 0;
+      max-width: 620px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: .97;
+      font-weight: 500;
+      letter-spacing: -.055em;
+    }
+    h1 em { font-weight: 400; }
+    .intro { max-width: 570px; margin: 20px 0 0; font-size: 18px; line-height: 1.55; }
+    .postcard {
+      width: min(100%, 340px);
+      justify-self: center;
+      transform: rotate(3deg);
+      filter: drop-shadow(7px 10px 0 rgba(23,48,127,.12));
+    }
+    .quote {
+      margin: 0;
+      padding: 16px 20px 19px;
+      background: var(--paper-light);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      box-shadow: 0 4px 0 rgba(23,48,127,.07);
+      font-size: clamp(21px, 3vw, 30px);
+      line-height: 1.2;
+      font-style: italic;
+    }
+    .quote small { display: block; margin-top: 12px; font: 700 9px/1.4 "Trebuchet MS", Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); }
+    .journey {
+      display: grid;
+      grid-template-columns: 1fr 62px 1fr 62px 1fr;
+      align-items: stretch;
+      margin: 12px 0 32px;
+    }
+    .stage {
+      min-height: 210px;
+      padding: 20px;
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      background: rgba(255,250,240,.58);
+    }
+    .stage.turn { background: var(--ink); color: var(--paper-light); border-color: var(--ink); }
+    .label { margin: 0 0 13px; font-size: 9px; font-weight: 700; }
+    .stage h2 { margin: 0 0 10px; font-size: 23px; line-height: 1.08; font-weight: 500; }
+    .stage p { margin: 0; font-size: 15px; line-height: 1.45; }
+    .turn .label, .turn .stage-note { color: #d8def2; }
+    .stage-note { display: block; margin-top: 13px; font: 11px/1.4 "Trebuchet MS", Arial, sans-serif; color: var(--ink-soft); }
+    .arrow { display: grid; place-items: center; color: var(--rose); font: 30px Georgia, serif; }
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 0 0 30px;
+    }
+    .principle { padding: 15px 16px; border-top: 2px solid var(--ink); }
+    .principle b { display: block; margin-bottom: 5px; font-size: 17px; font-weight: 500; }
+    .principle span { color: var(--ink-soft); font-size: 13px; line-height: 1.4; }
+    .bottom { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start; }
+    .note { padding: 18px 20px; border-left: 3px solid var(--rose); background: rgba(255,250,240,.56); }
+    .note h2 { margin: 0 0 8px; font-size: 19px; font-weight: 500; }
+    .note p { margin: 0; font-size: 13px; line-height: 1.5; }
+    .source { font-size: 9px; line-height: 1.8; letter-spacing: .1em; }
+    .source p { margin: 0 0 7px; }
+    .footer { margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: 9px; }
+    @media (max-width: 720px) {
+      .sheet { width: min(100% - 20px, 560px); margin: 10px auto; padding: 24px 20px; border-radius: 18px; }
+      .masthead { font-size: 8px; }
+      .hero { grid-template-columns: 1fr; padding: 32px 0 26px; }
+      .postcard { width: min(75%, 280px); }
+      .journey { grid-template-columns: 1fr; gap: 8px; }
+      .stage { min-height: auto; }
+      .arrow { height: 24px; transform: rotate(90deg); }
+      .principles, .bottom { grid-template-columns: 1fr; gap: 8px; }
+      .principle { padding: 12px 14px; }
+      .footer { flex-direction: column; gap: 6px; }
+    }
+    @media print {
+      body { background: white; }
+      .sheet { width: 100%; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header class="masthead">
+      <span>Italia Uno · A little local adventure</span>
+      <span class="folio">Brand book · 01 / Process</span>
+    </header>
+
+    <section class="hero" aria-labelledby="title">
+      <div>
+        <p class="eyebrow">A design turning point · 8 November 2026</p>
+        <h1 id="title">The story<br>changed <em>shape.</em></h1>
+        <p class="intro">A guided story became an invitation. The turning point was not adding more steps; it was making room for the guest to choose whether to follow the postcard.</p>
+      </div>
+      <svg class="postcard" viewBox="0 0 340 230" role="img" aria-labelledby="card-title card-desc">
+        <title id="card-title">A postcard from the noticeboard</title>
+        <desc id="card-desc">A hand-drawn postcard with three travel stamps and a small click-me pointer.</desc>
+        <path d="M25 25 Q30 16 42 18 L308 31 Q320 32 318 45 L305 196 Q304 208 291 207 L32 192 Q19 191 21 178Z" fill="#fffaf0" stroke="#17307f" stroke-width="3"/>
+        <path d="M42 45 Q130 51 295 58 M42 166 Q120 174 287 180" fill="none" stroke="#bdc3d2" stroke-width="1.5" stroke-dasharray="3 5"/>
+        <circle cx="270" cy="73" r="16" fill="none" stroke="#c99486" stroke-width="2"/>
+        <path d="M260 73h20M270 63v20" stroke="#c99486" stroke-width="1.5"/>
+        <text x="54" y="93" fill="#17307f" font-family="Georgia,serif" font-size="24" font-style="italic">Un piccolo</text>
+        <text x="54" y="122" fill="#17307f" font-family="Georgia,serif" font-size="28" font-style="italic">mondo.</text>
+        <text x="54" y="153" fill="#43558c" font-family="Arial,sans-serif" font-size="9" letter-spacing="2">BARI · SOHO · CHARLOTTE ST.</text>
+        <path d="M240 127h56l-10 10 10 10h-56Z" fill="#17307f"/>
+        <text x="267" y="140" text-anchor="middle" fill="#fffaf0" font-family="Arial,sans-serif" font-size="8" letter-spacing="1.5">CLICK ME!</text>
+      </svg>
+    </section>
+
+    <blockquote class="quote">“A little pause at the table. A story on the wall.”<small>On-screen copy · shipped in the experience</small></blockquote>
+
+    <section class="journey" aria-label="Design change from first spec to shipped work">
+      <article class="stage">
+        <p class="label">Before</p>
+        <h2>A story to complete</h2>
+        <p>The first spec mapped a linear journey: historical cards, quizzes, activities, four bites and a checkout unlocked at the end.</p>
+        <span class="stage-note">Documented proposal · Story Journey Spec</span>
+      </article>
+      <div class="arrow" aria-hidden="true">→</div>
+      <article class="stage turn">
+        <p class="label">Turning point</p>
+        <h2>Try it. Then rethink it.</h2>
+        <p>After trying that direction, the design changed: keep the meal as it was and let the story become optional.</p>
+        <span class="stage-note">Recorded in the dated spec and pivot commit</span>
+      </article>
+      <div class="arrow" aria-hidden="true">→</div>
+      <article class="stage">
+        <p class="label">After</p>
+        <h2>A postcard to discover</h2>
+        <p>A swinging “Click me!” postcard opens three illustrated rooms—Bari, Soho and Charlotte Street—with a gentle hide-and-seek, then returns to a shared table.</p>
+        <span class="stage-note">Shipped interaction · no quizzes or forced steps</span>
+      </article>
+    </section>
+
+    <section class="principles" aria-label="Design principles">
+      <div class="principle"><b>Opt-in curiosity</b><span>Offer a small invitation; let the guest decide to follow it.</span></div>
+      <div class="principle"><b>History beside imagination</b><span>Keep sourced context distinct from fictional scenes and play.</span></div>
+      <div class="principle"><b>Quiet resonance</b><span>Let the story deepen the meal without taking it over.</span></div>
+    </section>
+
+    <section class="bottom">
+      <aside class="note">
+        <h2>Proposed brand-book line</h2>
+        <p><em>“The best stories leave a little room at the table.”</em> Reflective copy written for this spread—not a customer or team quote.</p>
+      </aside>
+      <div class="source">
+        <p>Evidence: <a href="https://github.com/z48gdcngbf-jpg/italia_uno/blob/main/docs/STORY_JOURNEY_SPEC.md">replaced story spec</a> · <a href="https://github.com/z48gdcngbf-jpg/italia_uno/commit/f7b1d81">pivot commit</a></p>
+        <p>Shipped code: <a href="https://github.com/z48gdcngbf-jpg/italia_uno/blob/main/lib/postcard-game.mjs">game rules</a> · <a href="https://github.com/z48gdcngbf-jpg/italia_uno/blob/main/app/postcard-game.tsx">postcard experience</a></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Independent creative prototype · not an official endorsement</span>
+      <span>Warm paper · indigo ink · hand-drawn details</span>
+    </footer>
+  </main>
+</body>
+</html>
