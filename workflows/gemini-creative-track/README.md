@@ -1,5 +1,7 @@
 # Gemini × Italia Uno — reusable creative workflow
 
+For building a different specified game, start with [Custom Game Builder](../custom-game-builder/README.md). This page remains the Italia Uno conversation/workflow case record; its three shared links are not historical evidence of the new generic builder.
+
 [Agent log](../../docs/GEMINI_AGENT_LOG.md) · [Brand-book page](../../docs/GEMINI_BRAND_BOOK_PAGE.md) · [Prompt pack](PROMPTS.md) · [Evidence](evidence.json) · [Decisions](DECISIONS.csv) · [Demo media](../../docs/DEMO_MEDIA.md) · [Team art-direction prompt](../../docs/ART_DIRECTION_PROMPT.md)
 
 This workflow packages three genuine Gemini discussions and an independently checked source map. Gemini leads the drafting/critique stage; people supply the brief, constraints, references and decisions. It is a **retrospective reconstruction around an existing game**, not a newly invented historical development transcript.

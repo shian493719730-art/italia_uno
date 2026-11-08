@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "mode": "build",
+  "project": {
+    "name": "Orbit Parcel",
+    "purpose": "A short spatial-sorting puzzle with a satisfying completion screen.",
+    "audience": "Teenagers and adults playing a quick browser game.",
+    "existing_source": ""
+  },
+  "game": {
+    "genre": "puzzle",
+    "core_loop": "Select a parcel, rotate a route and send it to the matching airlock; observe feedback and plan the next move.",
+    "goal": "Route all six parcels correctly.",
+    "end_conditions": "Complete when all parcels arrive. Let the player retry mistakes and restart the board.",
+    "controls": [
+      "mouse",
+      "touch",
+      "keyboard"
+    ],
+    "session_minutes": 3
+  },
+  "art": {
+    "direction": "Clean flat space-station diagrams, clear silhouettes and restrained orbital motion.",
+    "palette": [
+      "midnight blue",
+      "cyan",
+      "warm orange"
+    ],
+    "references": [],
+    "sound": "Short original procedural confirmation tones with a mute control."
+  },
+  "delivery": {
+    "format": "single-html",
+    "languages": [
+      "en"
+    ],
+    "devices": [
+      "desktop",
+      "phone"
+    ],
+    "offline": true,
+    "engine": ""
+  },
+  "constraints": [
+    "Differentiate destinations with shape labels as well as colour.",
+    "Keep all assets inside the HTML file.",
+    "No accounts, email, analytics or network requirement."
+  ],
+  "optional_modules": {
+    "mailbox_setup": false,
+    "email_results": false,
+    "social_publishing": false
+  }
+}
