@@ -32,7 +32,9 @@ for(const kind of ['street','table']){
  close(tall.worldHeight,720);
  const wide=cameraLayout({width:1280,height:600,kind});
  close(wide.worldWidth,1280);close(wide.worldHeight,600);
- assert(wide.scale*640>=1280-24-1e-7,'landscape fills available width');
+ if(kind==='street')assert(wide.scale*640>=1280-24-1e-7,'landscape street fills available width');
+ // The table opens a little zoomed out on wide screens: at most 12% taller than fitting the height.
+ else assert(wide.scale<=(600-24)/420*1.12+1e-7&&wide.scale*640<1280-24,'landscape table is zoomed out a bit');
 }
 const resized=cameraLayout({width:844,height:390});
 assert(resized.worldWidth===844&&resized.scale!==portrait.scale,'resize recomputes a fitted landscape camera');
