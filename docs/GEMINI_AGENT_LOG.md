@@ -6,6 +6,8 @@
 
 **Co-creator: [Zhiang Wang](https://github.com/z48gdcngbf-jpg)** — human creative direction, reference selection, interaction and art-direction feedback, and submission decisions. Project home: [z48gdcngbf-jpg/italia_uno](https://github.com/z48gdcngbf-jpg/italia_uno).
 
+The [brand and art-direction prompt](ART_DIRECTION_PROMPT.md) is supplied by **Team Snapper through Zhiang Wang** and cited separately as H1. It records the human creative direction; its new reusable adaptation is not presented as a historical Gemini message.
+
 ## What we made together in these conversations
 
 The team supplied an existing café-game prototype, the competition brief and feedback. Gemini acted as the lead drafting and critique partner for a **source-grounded workflow reconstruction**: explaining the project, organizing the toolkit and revising the submission narrative. The visible conversations document this collaboration. They do not establish that Gemini originated or implemented the earlier game.

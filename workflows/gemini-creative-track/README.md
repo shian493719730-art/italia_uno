@@ -1,6 +1,6 @@
 # Gemini × Italia Uno — reusable creative workflow
 
-[Agent log](../../docs/GEMINI_AGENT_LOG.md) · [Brand-book page](../../docs/GEMINI_BRAND_BOOK_PAGE.md) · [Prompt pack](PROMPTS.md) · [Evidence](evidence.json) · [Decisions](DECISIONS.csv) · [Demo media](../../docs/DEMO_MEDIA.md)
+[Agent log](../../docs/GEMINI_AGENT_LOG.md) · [Brand-book page](../../docs/GEMINI_BRAND_BOOK_PAGE.md) · [Prompt pack](PROMPTS.md) · [Evidence](evidence.json) · [Decisions](DECISIONS.csv) · [Demo media](../../docs/DEMO_MEDIA.md) · [Team art-direction prompt](../../docs/ART_DIRECTION_PROMPT.md)
 
 This workflow packages three genuine Gemini discussions and an independently checked source map. Gemini leads the drafting/critique stage; people supply the brief, constraints, references and decisions. It is a **retrospective reconstruction around an existing game**, not a newly invented historical development transcript.
 
@@ -9,6 +9,8 @@ This workflow packages three genuine Gemini discussions and an independently che
 ## Prompt display and references
 
 Start with the [Prompt showcase and citations](PROMPTS.md#prompt-showcase). Three short prompt summaries carry three independent citations: toolkit framing [1], whole-game explanation [2], and code-visible postcard explanation [3]. Keep the original shared conversations separate; no combined link or transcript is needed.
+
+The team’s [brand and art-direction prompt](../../docs/ART_DIRECTION_PROMPT.md) is a separate human-provided source [H1], with the original narrative and a derived practical visual prompt.
 
 Then consult the [detailed agent log](../../docs/GEMINI_AGENT_LOG.md), [demo media index](../../docs/DEMO_MEDIA.md) and [one-page brand-book plan](../../docs/GEMINI_BRAND_BOOK_PAGE.md).
 
