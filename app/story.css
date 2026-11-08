@@ -1,0 +1,70 @@
+/* "The Postcard That Fell": story panel at My table (app/story-journey.tsx).
+   Desktop: the table scene on the left, the story on the right, so the plate is never covered.
+   Phones: the story sits below the scene in normal flow, like the other dialogue cards. */
+.story-panel{display:flex;flex-direction:column;gap:14px;min-height:0;padding:18px 20px 16px;overflow-y:auto;color:var(--ink);background-color:#f8efdc;background-image:var(--hd-paper-noise);border-left:1px solid #0b2b6c40;font:400 14px/1.6 var(--sans)}
+.story-head .micro{margin:0 0 8px!important}
+.story-steps{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0 0 10px;padding:0}
+.story-steps li{display:flex;align-items:center;gap:6px;padding:3px 10px 3px 4px;border:1px solid #0b2b6c30;border-radius:999px;font-size:12px;line-height:1.3;color:var(--hd-muted)}
+.story-steps li span{display:grid;place-items:center;width:20px;height:20px;border:1px solid currentColor;border-radius:50%;font-size:11px}
+.story-steps li.current{color:var(--ink);border-color:var(--ink);background:#fffaf0}
+.story-steps li.finished{color:var(--ink)}
+.story-steps li.finished span{color:#f8efdc;background:var(--ink);border-color:var(--ink)}
+.story-plate{display:flex;align-items:center;gap:10px;font-size:13px}
+.story-plate-bites{display:flex;gap:4px}
+.story-plate-bites i{width:14px;height:14px;border:1.5px solid var(--ink);border-radius:50%}
+.story-plate-bites i.left{background:#d9bd8b}
+
+.story-host{display:grid;grid-template-columns:48px minmax(0,1fr);gap:12px;align-items:start}
+.format-layout .story-host .customer-host-art{width:48px;height:52px;margin:0;align-self:start}
+.format-layout .story-host .customer-host-art .pixel-host-portrait{width:48px;height:51px}
+.story-host .speaker-label{margin:0 0 6px;font:600 10px/1.4 var(--sans);letter-spacing:1px;color:var(--hd-muted)}
+.story-host .speaker-label span{font-weight:400;font-style:italic;letter-spacing:0}
+.story-host h2{margin:0 0 8px;font:400 24px/1.25 var(--hand);color:var(--ink)}
+.story-host h2:focus{outline:none}
+.story-host h2:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.story-host p{margin:0 0 8px;color:#414d6d}
+
+.story-body{display:flex;flex-direction:column;gap:12px}
+.story-card{padding:12px 14px;background:#fffaf0;border:1px solid #0b2b6c55;border-radius:4px 8px 5px 7px;box-shadow:2px 3px #0b2b6c14}
+.story-card-label{display:inline-block;margin:0 0 6px;padding:2px 8px;border:1px solid var(--ink);border-radius:999px;font:600 10px/1.4 var(--sans);letter-spacing:.8px;text-transform:uppercase}
+.story-card-fact{margin:0 0 8px;font:400 15px/1.55 var(--ui-serif)}
+.story-card-sources{display:flex;flex-direction:column;gap:2px;font-size:12px}
+.story-card-sources span{color:var(--hd-muted)}
+.story-card-sources a{color:var(--ink)}
+
+.story-choices{display:flex;flex-wrap:wrap;gap:8px}
+.story-choices button{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 14px;color:var(--ink);background:#fffaf0;border:1px solid #0b2b6c9c;border-radius:6px 4px 7px 3px;font:400 15px/1.3 var(--sans);cursor:pointer}
+.story-choices button:hover{background:#fff}
+.story-choices button.picked,.story-choices button[aria-pressed="true"]{color:#f8efdc;background:var(--ink);border-color:var(--ink)}
+.story-choices button.tried{opacity:.55;text-decoration:line-through}
+.story-choices-label{flex-basis:100%;margin:4px 0 0;font-size:12px;color:var(--hd-muted)}
+.story-panel :is(button,a,input):focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.story-count{margin:0;font-size:13px;color:var(--hd-muted)}
+.story-panel .primary{align-self:flex-start;min-height:44px}
+
+.story-queue{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.story-queue li{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:8px 10px;color:var(--hd-muted);border:1px dashed #0b2b6c40;border-radius:6px}
+.story-queue li.current{color:var(--ink);background:#fffaf0;border-style:solid;border-color:var(--ink)}
+.story-queue li.served{opacity:.7}
+.story-bubble{padding:2px 10px;border:1px solid currentColor;border-radius:12px 12px 12px 2px;font-weight:600}
+
+.story-bring{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;border:0}
+.story-bring legend{margin:0 0 8px;padding:0;font:400 18px/1.3 var(--hand);color:var(--ink)}
+.story-field{display:flex;flex-direction:column;gap:4px;font-size:13px}
+.story-field input{min-height:44px;padding:8px 10px;color:var(--ink);background:#fffaf0;border:1px solid #0b2b6c9c;border-radius:6px;font:400 16px/1.3 var(--sans)}
+.story-postcard-preview{padding:12px 14px;background:#fffaf0;border:1px solid #0b2b6c55;box-shadow:2px 3px #0b2b6c18;transform:rotate(-1deg)}
+.story-postcard-preview p{margin:4px 0 0;font:400 18px/1.4 var(--hand)}
+
+.story-feedback{min-height:1.4em;margin:0;font-weight:600;color:#7a3e2c}
+.story-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;margin-top:auto;padding-top:10px;border-top:1px dashed #0b2b6c30}
+.story-foot .quiet{min-height:44px}
+
+@media(min-width:761px){
+ .inside.format-layout .frame-eating .format-room-stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,420px);grid-template-rows:minmax(0,1fr)}
+ .inside.format-layout .frame-eating .format-scene-slot{position:relative;inset:auto;grid-column:1;grid-row:1;min-width:0;min-height:0}
+ .inside.format-layout .frame-eating .story-panel{grid-column:2;grid-row:1}
+}
+@media(max-width:760px){
+ .format-layout .story-panel{order:3;margin:0 14px 16px;padding:16px;overflow:visible;border:1px solid #0b2b6c55;border-radius:14px}
+ .story-host h2{font-size:20px}
+}
