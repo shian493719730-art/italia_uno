@@ -84,6 +84,17 @@ The logo is team-supplied proposed identity artwork. This is an **independent cr
 
 Human direction and iterative feedback shaped the concept, identity, flow, interaction and mobile refinements. AI assisted implementation, translations and verification. [The workflow](docs/WORKFLOW.md) records this scope without inventing team roles, owner testimony, or Gemini/Canva deliverables.
 
+### Credits
+
+| Who | What they did |
+| --- | --- |
+| **[Zhiang Wang](https://github.com/z48gdcngbf-jpg)** and **Team Snapper** | Creative direction, references, the art-direction brief, feedback on every round, and all decisions about what ships. |
+| **Gemini** (Google) | Lead drafting and critique partner for the Creative Track package: the [agent log](docs/GEMINI_AGENT_LOG.md), the [reusable creative workflow and prompt pack](workflows/gemini-creative-track/README.md), the [one-page brand-book plan](docs/GEMINI_BRAND_BOOK_PAGE.md) and the [development walkthrough](docs/DEMO_MEDIA.md), all through shared conversations linked in those pages. |
+| **Codex** (OpenAI) | The original game build: drawing code, game logic, music, translations and checks, as recorded in [WORKFLOW.md](docs/WORKFLOW.md). |
+| **Claude** (Anthropic) | Later changes in this repository: the Start over button, the swinging-postcard hide-and-seek with its room stories and family-table ending, merging the bistro redesign with Japanese for the new game, the phone and desktop layout fixes, and the Instagram workflow docs. These commits carry a "Co-Authored-By: Claude" line. |
+
+Each AI's work was reviewed and directed by the people above. The commit history shows exactly who changed what.
+
 ## 中文快速开始
 
 这是可以独立运行、修改和复用的完整开源游戏。安装 Node.js 22.13+ 后运行：
