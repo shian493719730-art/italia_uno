@@ -41,6 +41,10 @@ npm run typecheck
 
 If a project owner needs a new mailbox before setting up project services, use the [assisted email-creation workflow](workflows/email-setup/README.md) and [reusable prompt](workflows/email-setup/PROMPT.md). It covers official Gmail/Outlook signup, owner-controlled private steps and a mailbox-access check. This is a documented preparation workflow; no email account is created automatically.
 
+## Optional order-receipt email workflow
+
+The [order-email module](workflows/order-email/README.md) documents a future checkout email for both the customer and shop/project, with an [agent prompt](workflows/order-email/PROMPT.md), disabled configuration, HTML template and offline payload preview. It is a reusable workflow, not a live integration: it does not register mailboxes or send messages, and the game currently keeps its existing receipt behaviour.
+
 ## Brand promotion workflow
 
 This repository also includes a local-first Instagram publishing workflow in [`workflows/instagram-publishing/`](workflows/instagram-publishing/). It turns reviewed, authorized brand material into a queue with a pause switch, daily limit, duplicate-prevention ledger and a required post-publication readback. It does not log in, generate posts, or automatically publish; a separately authorized browser operator performs the final action once.
