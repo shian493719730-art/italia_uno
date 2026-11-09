@@ -2,7 +2,7 @@
 
 A handcrafted café exploration and restaurant-management game, released for anyone to run, study and remix. Indigo ink, warm paper, an animated fictional host and an original scene-aware Web Audio score.
 
-**Co-creator: [Zhiang Wang](https://github.com/z48gdcngbf-jpg)** — human creative direction, reference selection, interaction and art-direction feedback, and submission decisions. Project home: [z48gdcngbf-jpg/italia_uno](https://github.com/z48gdcngbf-jpg/italia_uno).
+**Co-creator: [Zhiang Wang](https://github.com/z48gdcngbf-jpg)** — human creative direction, reference selection, interaction and art-direction feedback, and submission decisions. Project home: [shian493719730-art/italia_uno](https://github.com/shian493719730-art/italia_uno)
 
 [Play the live game](https://z48gdcngbf-jpg.github.io/italia_uno/) · [中文说明](#中文快速开始) · [MIT license](LICENSE) · [Production workflow](docs/WORKFLOW.md) · [Brand and art-direction prompt](docs/ART_DIRECTION_PROMPT.md)
 
@@ -21,7 +21,7 @@ Want an AI assistant to make a game from someone else's brief? The portable buil
 Use **Node.js 22.13 or newer** and npm. No account, API key, database, paid service or Sites plugin is required.
 
 ```sh
-git clone https://github.com/z48gdcngbf-jpg/italia_uno.git
+git clone https://github.com/shian493719730-art/italia_uno.git
 cd italia_uno
 npm ci
 npm run dev
